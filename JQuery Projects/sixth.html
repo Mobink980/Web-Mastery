@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Drag</title>
+    <link href="../jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+
+    <script src="../jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="../jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+   
+
+    <style>
+        body {
+            text-align: center;
+            background-image: url("Images/sanders.jpg");
+        }
+
+            body h1 {
+                color: white;
+                font-family: 'Microsoft Himalaya';
+                font-size: 3em;
+            }
+
+        .container {
+            margin: 20px auto;
+            width: 80%;
+            height: 600px;
+            background: white;
+        }
+
+        .box {
+            display: inline-block;
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            background: #ff6a00;
+            user-select: all; /*the user should be unable to select elements within one element*/
+        }
+
+        .center {
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            text-align: right;
+            color: white;
+            font: 16px, tahoma;
+        }
+        /*In z-index, the more the value for the element, the more the importance of showing the element. (above all other element)*/
+        /*If we don't indicate z-index, then the next element we define has a higher priority than previous one*/
+        #box1 {
+            z-index: 1;
+            background-color: aqua;
+        }
+
+        #box2 {
+            z-index: 1;
+            background-color: crimson;
+        }
+
+        #box3 {
+            z-index: 1;
+            background-color: darkgreen;
+        }
+
+        #box4 {
+            z-index: 1;
+            background-color: darkorange;
+        }
+
+        #box5 {
+            z-index: 1;
+            background-color: darksalmon;
+        }
+
+        #box6 {
+            z-index: 0;
+            background-color: cornflowerblue;
+            height: 120px;
+            width: 650px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery User Interface Draggable</h1>
+    <div class="container">
+        <div id="box1" class="box">
+            <div class="center">Box1</div>
+        </div>
+
+        <div id="box2" class="box">
+            <div class="center">Box2</div>
+        </div>
+
+        <div id="box3" class="box">
+            <div class="center">Box3</div>
+        </div>
+
+        <div id="box4" class="box">
+            <div class="center">Box4</div>
+        </div>
+
+        <div id="box5" class="box">
+            <div class="center">Box5</div>
+        </div>
+
+        <br />
+        <div id="box6" class="box">
+
+        </div>
+    </div>
+
+    
+
+    <script type="text/javascript">
+        $(".box").draggable({ containment: ".container", scroll: true }); //make box draggable within the div with the class .container
+        $("#box1").draggable({ containment: ".container", scroll: true, axis: "x" }); //moves only at the x axis
+        $("#box3").draggable({ containment: ".container", revert: "invalid"}); //reverts only if the drop is invalid
+        //helper, works with an instance of the element
+        $("#box4").draggable({ containment: ".container", helper: "clone" , cursor: "move"});
+
+        //reverts only if the drop is valid
+        $("#box5").draggable({ containment: ".container", revert: "valid", cursor: "pointer"});
+
+        $("#box6").droppable({ //box6 is the drop destination for other 5 boxes
+            drop: function () {
+                $(this).text("Dropped!!");
+            }, accept: "#box2, #box3, #box5" //accept only the box with the id box2 and id box3
+        });
+
+        $("#box1").resizable(); //making the sixth box resizable
+        //Making resize more beautiful by animation and constraining it to the div with class .container
+        $("#box6").resizable({
+            animate: false,
+           // grid: 5,
+            //containment: ".container",
+            //aspectRatio: 16/9,
+            maxHeight: 800,
+            maxWidth: 1000,
+            minHeight: 200,
+            minWidth: 250,
+            //alsoResize: "#box1" //usually used when we want two elements in our pages to always be the same.
+        }); 
+    </script>
+</body>
+</html>

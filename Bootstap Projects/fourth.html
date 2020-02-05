@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!--for other characters beside english-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fourth</title>
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            direction: ltr;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            position: relative;
+        }
+
+        #menu {
+            width: 100% !important;
+            z-index: 5;
+            /*to be on top of other elements*/
+        }
+
+        .affix {
+            top: 0px;
+        }
+
+        #header1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.0em;
+            font-weight: 700;
+            color: rgb(97, 87, 143);
+            margin-top: 0;
+        }
+
+        #header {
+            background-color: rgb(47, 51, 54);
+            width: 100%;
+            height: 150px;
+            color: white;
+            top: 0px;
+        }
+    </style>
+</head>ّ
+
+<body data-spy="scroll" data-target="#menu">
+    <!-- <div id="header">
+
+    </div> -->
+    <nav id="menu" class="navbar navbar-inverse" data-spy="affix">
+        <!--navbar-fixed-bottom will bring the menu to the bottom.-->
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Google</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#Home">Home</a></li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        page1
+                        <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">page 1-1</a></li>
+                        <li><a href="#">page 1-2</a></li>
+                        <li><a href="#">page 1-3</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">page 2</a></li>
+                <li><a href="#">page 3</a></li>
+            </ul>
+
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" />
+                </div>
+                <input type="submit" class="btn btn-default" value="Go">
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign in</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div style="margin-top: 50px;" class="container well">
+
+        <div class="page-header">
+            <h1>Be a Winner.</h1>
+            <p>Whoever stays down is a fucking looser. But a winner, fails and gets up, fails and gets up,
+                fails and gets up,fails and gets up, he always gets up; and that is a winner.
+            </p>
+
+        </div>
+
+        <button class="btn btn-danger" data-toggle="collapse" data-target="#para1">Look out closely</button>
+        <p id="para1" class="collapse">
+            This is a collapse by button.This is a collapse by button.This is a collapse by button.
+            This is a collapse by button.This is a collapse by ّbutton.This is a collapse by button. <br />
+            This is a collapse by button.This is a collapse by button.This is a collapse by button.
+            This is a collapse by button.This is a collapse by ّbutton.This is a collapse by button. <br />
+            This is a collapse by button.This is a collapse by button.This is a collapse by button.
+            This is a collapse by button.This is a collapse by ّbutton.This is a collapse by button. <br />
+        </p>
+
+        <br><br>
+        <div style="display: inline-block;" id="btn1" data-toggle="tooltip" data-placement="right" title="watch out!!">
+            <a class="btn btn-danger" data-toggle="collapse" href="#">Dangerous</a>
+        </div>
+        <br><br>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="#panelCollapse1" data-parent="#accordion" data-toggle="collapse">Deadlines</a>
+                </div>
+                <!--the item which has "in" in its class will remain open at the beginning-->
+                <div class="panel-collapse collapse in" id="panelCollapse1" style="padding: 8px;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, quae!
+                    Debitis, nam consectetur modi culpa sint nobis, repellat reiciendis aliquid,
+                    commodi laborum iusto accusantium id dolore ad obcaecati ipsum reprehenderit! <br><br>
+                    <ul class="list-group">
+                        <li class="list-group-item active">
+                            <h4 class="list-group-item-heading">This is the heading.</h4>
+                            <p class="list-group-item-text">
+                                This is a paragraph.This is a paragraph.This is a paragraph.This is a paragraph.
+                                This is a paragraph.This is a paragraph.This is a paragraph.This is a paragraph.
+
+                            </p>
+                        </li>
+                        <li class="list-group-item">This is an example.</li>
+                        <li class="list-group-item">This is an example.</li>
+                        <li class="list-group-item">This is an example.</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="#panelCollapse2" data-parent="#accordion" data-toggle="collapse">Deadlines</a>
+                </div>
+                <div class="panel-collapse collapse" id="panelCollapse2" style="padding: 8px;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, quae!
+                    Debitis, nam consectetur modi culpa sint nobis, repellat reiciendis aliquid,
+                    commodi laborum iusto accusantium id dolore ad obcaecati ipsum reprehenderit! <br><br>
+
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="#panelCollapse3" data-parent="#accordion" data-toggle="collapse">Deadlines</a>
+                </div>
+                <div class="panel-collapse collapse" id="panelCollapse3" style="padding: 8px;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, quae!
+                    Debitis, nam consectetur modi culpa sint nobis, repellat reiciendis aliquid,
+                    commodi laborum iusto accusantium id dolore ad obcaecati ipsum reprehenderit! <br><br>
+
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <ul class="nav nav-pills menu-primary">
+            <!--We can have nav-pills, both nav-tabs and nav-pills can be nav-stacked or nav-justified-->
+            <li class="active">
+                <a href="#">Home</a>
+            </li>
+
+            <li>
+                <a href="#">Applications</a>
+            </li>
+
+            <li>
+                <a href="#">About</a>
+            </li>
+
+            <li>
+                <a href="#">Contact us</a>
+            </li>
+        </ul>
+
+        <br /><br /><br />
+
+        <ul class="nav nav-tabs nav-justified menu-primary">
+            <!--We can have nav-pills, both nav-tabs and nav-pills can be nav-stacked or nav-justified-->
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+            <li class="active">
+                <a href="#">Applications</a>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Mary</a></li>
+                    <li><a href="#">Jennifer</a></li>
+                    <li><a href="#">John</a></li>
+                    <li class="disabled"><a href="#">James</a></li>
+                    <li><a href="#">Maher</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Exit</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Contact us</a>
+            </li>
+        </ul>
+
+        <br /><br /><br />
+        <!--The below structure should be recognized by the bootstrap to create a perfect nav.
+         data-toggle must be pill and also hyper reference or href of <a> tags should be the same with the div ids.
+             jquery codes in the bootstrap.js will set the communication between these links and the ids.-->
+        <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+        <ul class="nav nav-pills">
+            <!--We can have nav-pills, both nav-tabs and nav-pills can be nav-stacked or nav-justified-->
+            <li class="active"><a href="#Home" data-toggle="pill">Home</a></li>
+
+            <li><a href="#Applications" data-toggle="pill">Applications</a></li>
+
+            <li><a href="#AppMobile" data-toggle="pill">About</a></li>
+
+            <li><a href="#ContactUs" data-toggle="pill">Contact us</a></li>
+        </ul>
+
+        <!--we should write fade in for the first class to be active at the first and fade for the others-->
+        <div class="tab-content">
+            <div id="Home" class="tab-pane fade in active">
+                <h2>Home</h2>
+                <p>This is a tab content 1.</p>
+                <img src="images/hero1.jpg" alt="We only use all-natural ingredients"
+                    class="center-block col-md-10 col-md-offset-1 col-sm-6 col-sm-offset-3 col-xs-offset-1 col-xs-10">
+            </div>
+
+            <div id="Applications" class="tab-pane fade">
+                <h2>Applications</h2>
+                <p>This is a tab content 2.</p>
+                <img src="images/hero2.jpg" alt="We only use all-natural ingredients"
+                    class="center-block col-md-10 col-md-offset-1 col-sm-6 col-sm-offset-3 col-xs-offset-1 col-xs-10">
+            </div>
+
+            <div id="AppMobile" class="tab-pane fade">
+                <h2>App Mobile</h2>
+                <p>This is a tab content 3.</p>
+                <img src="images/hero3.jpg" alt="We only use all-natural ingredients"
+                    class="center-block col-md-10 col-md-offset-1 col-sm-6 col-sm-offset-3 col-xs-offset-1 col-xs-10">
+            </div>
+
+            <div id="ContactUs" class="tab-pane fade">
+                <h2>Contact Us</h2>
+                <p>This is a tab content 4.</p>
+                <img src="images/hero4.jpg" alt="We only use all-natural ingredients"
+                    class="center-block col-md-10 col-md-offset-1 col-sm-6 col-sm-offset-3 col-xs-offset-1 col-xs-10">
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+        <div class="panel-group">
+            <div class="panel panel-success" id="panel1">
+
+                <div class="panel-heading">
+                    <a href="#panelCollapse1" data-toggle="collapse">Cities</a>
+                </div>
+
+                <div id="panelCollapse1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Body
+                    </div>
+                    <div class="panel-footer">
+                        Footer
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="panel panel-info" id="panel2">
+
+                <div class="panel-heading">
+                    <a href="#panelCollapse2" data-toggle="collapse">Countries</a>
+                </div>
+
+                <div id="panelCollapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Body
+                    </div>
+                    <div class="panel-footer">
+                        Footer
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br><br>
+        <!--Below is what comments look like.-->
+        <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="images/topsyturvylogo.png" alt="The user" width="64">
+                </a>
+            </div>
+
+            <div class="media-body">
+                <h4 class="media-heading">Heading</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, nihil
+                    voluptatem minus voluptatum doloremque laudantium nisi impedit sit
+                    inventore doloribus, harum architecto tempore officiis? Ipsam eveniet
+                    voluptatem minus similique est?</p>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" src="../Images/1.jpg" alt="The user" width="64">
+                </a>
+            </div>
+
+            <div class="media-body">
+                <h4 class="media-heading">Heading</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, nihil
+                    voluptatem minus voluptatum doloremque laudantium nisi impedit sit
+                    inventore doloribus, harum architecto tempore officiis? Ipsam eveniet
+                    voluptatem minus similique est?</p>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="../Images/2.jpg" alt="The user" width="64">
+                </a>
+            </div>
+
+            <div class="media-body">
+                <h4 class="media-heading">Heading</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, nihil
+                    voluptatem minus voluptatum doloremque laudantium nisi impedit sit
+                    inventore doloribus, harum architecto tempore officiis? Ipsam eveniet
+                    voluptatem minus similique est?</p>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="../Images/3.jpg" alt="The user" width="64">
+                </a>
+            </div>
+
+            <div class="media-body">
+                <h4 class="media-heading">Heading</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, nihil
+                    voluptatem minus voluptatum doloremque laudantium nisi impedit sit
+                    inventore doloribus, harum architecto tempore officiis? Ipsam eveniet
+                    voluptatem minus similique est?</p>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="../Images/13.jpg" alt="The user" width="64">
+                </a>
+            </div>
+
+            <div class="media-body">
+                <h4 class="media-heading">Heading</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, nihil
+                    voluptatem minus voluptatum doloremque laudantium nisi impedit sit
+                    inventore doloribus, harum architecto tempore officiis? Ipsam eveniet
+                    voluptatem minus similique est?</p>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="../Images/9.jpg" alt="The user" width="64">
+                </a>
+            </div>
+
+            <div class="media-body">
+                <h4 class="media-heading">Heading</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, nihil
+                    voluptatem minus voluptatum doloremque laudantium nisi impedit sit
+                    inventore doloribus, harum architecto tempore officiis? Ipsam eveniet
+                    voluptatem minus similique est?</p>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="../Images/8.jpg" alt="The user" width="64">
+                </a>
+            </div>
+
+            <div class="media-body">
+                <h4 class="media-heading">Heading</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, nihil
+                    voluptatem minus voluptatum doloremque laudantium nisi impedit sit
+                    inventore doloribus, harum architecto tempore officiis? Ipsam eveniet
+                    voluptatem minus similique est?</p>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="../Images/7.jpg" alt="The user" width="64">
+                </a>
+            </div>
+
+            <div class="media-body">
+                <h4 class="media-heading">Heading</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, nihil
+                    voluptatem minus voluptatum doloremque laudantium nisi impedit sit
+                    inventore doloribus, harum architecto tempore officiis? Ipsam eveniet
+                    voluptatem minus similique est?</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Bootstrap libraries must be above all jquery libraries.-->
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="../jquery-ui-1.12.1/jquery-1.11.1.min.js"></script>
+    <link href="../jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+    <script src="../jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="../jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+    <script>
+
+
+        $(".menu-primary li").click(function () {//making the tabs active
+            $(this).tab("show");
+        });
+
+        $("#btn1").tooltip({
+            html: true,
+            delay: { "show": 3000, "hide": 400 }
+        });
+    </script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

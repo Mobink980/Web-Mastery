@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<!--I can create a style tag and define all of my css codes inside this tag.
+Also there is no need to write type = "text/css". Because browsers can get it. But it's for assurance.
+-->
+<!-- Every time you saw the p tag, enforce these styles.-->
+<!-- id starts with # but classes start with a dot. we can call one class for several elements
+and we dont have the id restriction for class.-->
+<!-- opacity is between 0 and 1 and 0 disapears the element. including the text inside or 
+we can use rgba instead of rgb to give the opacity as the last argument right away. opacity
+effects the whole box including the test inside, but alpha in rgba only effects the background.-->
+<!--z-index helps when elements are supposed to be on each other, when we change their positions.
+Regularly elements do not stay on each other. so z-index is only useful when we use position -->
+<!-- margin determines the distance of an element from each side of the page. Padding determines
+the position of elements like text inside that element from its borders. padding will 
+become added to the surrounding of that element and therefore increases its size.
+margin is external between element and external elements. But padding is internal.-->
+<!-- to use persian we write <meta charset = "utf-8" /> in the header section.-->
+
+<head>
+<title>First Web App</title>
+<meta charset = "utf-8" />
+
+<style type = "text/css">
+#header1 {
+      text-align: center;
+}
+#paragraph0{
+      text-align:right;
+      
+}
+#paragraph1 { 
+      color:white;
+      font-size:21px;
+}
+
+#paragraph2 { 
+      color:#fed369;
+      background-color:black;
+      font-size:21px;
+}
+	#button1{
+		     
+      background-color:#7a2020;
+		color:white;
+		width: 100px;
+		height: 30px;
+		padding: 10px;	
+		text-decoration: none;
+
+	}
+
+.large{
+      color:white;
+      background-color:red;
+      font-family:Tahoma;
+      font-size:30px;
+      font-style: italic;
+      font-variant: small-caps;
+      font-weight: bold;
+}
+.small{
+      color:white;
+      background-color:green;
+      font-family:Tahoma, Arial, 'Times New Roman';
+      font-size:15px;
+}
+
+.underline{
+      text-decoration:underline;
+}
+div{
+      width:100px;
+      height:100px;
+      margin:20px;
+      float:left;
+      border:2px solid gray;
+}
+.box-0{
+      width:200px;
+      height:200px;
+      background-color:rgba(255,111,35,0.8);
+      margin:20px 20px 60px 30px;
+      padding:30px;
+      border:4px solid black;
+      border-width: 1px 3px 5px 1px;
+      border-style: ridge ridge solid solid;
+      border-radius:10px;
+      
+}
+.box-1{
+      width:200px;
+      height:200px;
+      background-color:rgba(123,215,11,0.8);
+      margin-bottom:20px;
+      padding:10px;
+      border:3px dashed black;
+}
+.box-2{
+      width:200px;
+      height:200px;
+      background-color:rgba(33,123,254,0.8);
+      margin:20px;
+}
+.box-3{
+      width:200px;
+      height:200px;
+      background-color:rgba(56,181,43,0.8);
+      margin:20px;
+}
+.box-4{
+      width:200px;
+      height:200px;
+      background-color:rgba(255,111,255,1);
+      position:absolute;
+      right:100px;
+      top:100px;
+      z-index:1;
+      
+}
+.box-5{
+      width:200px;
+      height:200px;
+      background-color:rgba(193,163,35,1);
+      position:fixed;
+      right:100px;
+      top:100px;
+      z-index:0;  
+       
+}
+.box-black{
+      color:black;
+      font-size:20px;
+      width:200px;
+      height:200px;
+      background-color:rgb(13,213,255);
+      opacity:0.7;
+}
+
+body{
+      background: url("ai.jpg");
+}
+	
+	a {
+		text-decoration: none;
+	}
+	
+	a:visited{
+		color: crimson;
+	}
+	a:link{
+		color: green;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+	a:active{
+		color: goldenrod;
+	}
+	.list1{
+		background-color:#7a2020;
+		color:white;
+		width: 100px;
+		height: 30px;
+		padding: 10px;	
+		text-decoration: none;
+		list-style: none;
+		display: block;
+	    
+	}
+	a[href$="com"]::before{
+		content: url("My web Designs/Assets/model-craft.png");
+	}
+
+	*::selection{
+		color: white;
+		background-color: palevioletred;
+	}
+</style>
+
+</head>
+
+<!--when we give style to an element inside a tag, we call it inline css -->
+<body>
+<button id="btnClick">Click</button>
+<br>
+<button id="btnCreateList">Click for List</button>
+	<br>
+<button id="btnAppendList">Click to Append</button>
+<p id="outputlist"></p>
+<div id = "header">Eagle Corporation</div> 
+<div id = "nav">LONDON <br> PARIS <br> TOKIO</div>
+<a name = "top"> </a>
+<h1 id = "header1"> My header page </h1>
+<h2> My header page </h2>
+<h3> My header page </h3>
+<h4> My header page </h4>
+<h5> My header page </h5>
+<h6> My header page </h6>
+
+
+	<!--id for each element must be unique-->
+
+<p id = "paragraph0"> 
+این یک متن فارسی می باشد
+    </p>
+<p id="para">Hellooo!!!</p>
+
+
+<input type="button" value="Change first paragraph" onClick= "ChangeElement();">
+<p id = "paragraph1"> <!--id for each element must be unique-->
+This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.
+This is a paragraph.
+</p>
+
+<p id = "paragraph2"> <!--id for each element must be unique-->
+This is a paragraph. This is a <span class = "underline">paragraph.</span> This is a paragraph. This is a paragraph. This is a paragraph.
+This is a paragraph.
+</p>
+ <!--we can use several classes in one class attribute, and these classes have the same priority 
+ but what determines which of them will be enforced later, is the sequence which classes appear 
+ in style tag. that's why we call it cascading style sheet or css-->
+<p class = "large underline small">
+This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.
+This is a paragraph.
+</p>
+
+<p class = "small"> 
+This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.
+This is a paragraph.
+</p>
+
+<p class = "large"> 
+This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.
+This is a paragraph.
+</p>
+
+<!--div tag groups the page into different parts; and it's a really useful and important tag.
+I put all elements in a dive, and then I give the div tag a style to be enforced to all its subsets.
+in todays modern websites, we use several div tags for body, upper menue, left menue and others 
+and then we organize our elements into them.-->
+<div class = "box-0">This is a Div tag.</div>
+<div class = "box-1">This is a Div tag.</div>
+<div class = "box-2">This is a Div tag.</div>
+<div class = "box-3">This is a Div tag.</div>
+<div class = "box-4">This is a Div tag.</div>
+<div class = "box-5">This is a Div tag.</div>
+
+<br><br><br><br>
+<p style="clear:both" class = "large"> 
+This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.
+This is a paragraph.
+</p>
+	<a  href = "https://www.yahoo.com" target = "_blank"> Yahoo</a>
+	<br><br>
+<a id="button1"  href = "https://www.android.com/intl/en_in/phones/" target = "iframe1"> Android</a> <br>
+	
+<hr>
+<iframe name = "iframe1" src = "https://www.bing.com" width = "500" height = "350"> </iframe>
+<br><br>
+<p style = "color:blue; font_size:20px;"> 
+This is a paragraph. 
+This is a paragraph. <br>
+<b>This is a  bold sentence. </b>
+<strong>This is also a  bold sentence. with a standard tag </strong>
+<u>This is a underline.</u>
+<i>This is a italic.</i> 
+<em>This is also an  italic sentence. with strong tag </em>
+</p>
+<hr>
+<p> this is a text after hr <strike>fljflsajfk </strike> </p>
+<br>
+<p> this is a list ul type  unordered list </p>
+<ul>
+<li>Html </li>
+<li>Css </li>
+<li>Javascript </li>
+<li>Bootstrap </li>
+</ul>
+	
+<ul>
+<li class="list1"><a  href = "https://www.sanjesh.org" target = "_blank"> Microsoft</a> </li>
+<li class="list1"><a  href = "https://www.google.com" target = "_blank"> Google</a> </li>
+<li class="list1"><a  href = "https://www.yahoo.com" target = "_blank"> Yahoo</a> </li>
+<li class="list1"><a  href = "https://www.bing.com" target = "_blank"> Bing</a> </li>
+<li class="list1"><a  href = "https://www.microsoft.com" target = "_blank"> Microsoft</a> </li>
+</ul>
+	
+<p> this is a list ol type  ordered list </p>
+<ol>
+<li>Html </li>
+<li>Css </li>
+<li>Javascript </li>
+<li>Bootstrap </li>
+</ol>
+
+<p>This is an image </p>
+<form>
+	
+<br>
+Username: <input type = "text" name = "username"> <br> <br>
+Password: <input type = "password" name = "password"> <br> <br>
+<input type = "submit">
+<select name="language"> 
+<option>Select Language:</option>
+<option>English</option>
+<option>French</option>
+<option>Spanich</option>
+<option>German</option>
+<option>Farsi</option>
+</select>
+
+<p>textareas have security problems </p>
+<textarea> </textarea>
+<input type = "checkbox"> Blue
+<input type = "checkbox"> Green
+<input type = "checkbox"> Red
+
+<br> <br>
+<p>
+If two radio group are in the same form, to work properly, each item in a group should have 
+the same name and the name in two groups should be different. Below there is a link.
+</p>
+<a href = "https://www.google.com">Google</a>
+<br>
+
+<br>
+<input type = "radio" name="languages"> English
+<input type = "radio" name="languages"> Farsi
+<input type = "radio" name="languages"> Arabic
+</form>
+
+<p>This is an image </p>
+<img src = "E:\programs\Web\photos\first.jpg" width = "350" height = "400"/>
+<br>
+<form>
+<input type = "radio" name="first"> Nice
+<input type = "radio" name="first"> Very Nice
+<input type = "radio" name="first"> Excellent
+
+<br>
+<p>This is another image </p>
+<img src = "E:\programs\Web\photos\second.jpg" width = "350" height = "400"/>
+<br>
+
+<input type = "radio" name="second"> Nice
+<input type = "radio" name="second"> Very Nice
+<input type = "radio" name="second"> Excellent
+
+<br>
+<p>This is another image </p>
+<img src = "E:\programs\Web\photos\third.jpg" width = "350" height = "400"/>
+<br>
+
+<br>
+<p>This is another image </p>
+<img src = "E:\programs\Web\photos\fifth.jpg" width = "350" height = "400"/>
+<br>
+
+<br>
+<p>This is another image </p>
+<img src = "E:\programs\Web\photos\eighth.jpg" width = "350" height = "400"/>
+<br>
+
+<br>
+<p>This is another image </p>
+<img src = "E:\programs\Web\photos\tenth.jpg" width = "350" height = "400"/>
+<br>
+
+<br>
+<p>This is another image </p>
+<img src = "E:\programs\Web\photos\fourteenth.jpg" width = "350" height = "400"/>
+<br>
+</form>
+<br> <br> <br>
+ <!-- 
+         In table tag, tr is a row and td is a column. 
+         th is the header of a column in a table.
+      -->
+<table> 
+<tr>   <!--First row: headers -->
+<th>Name </th>
+<th> Family</th>
+<th> Age</th>
+</tr>  
+
+<tr> <!--Second row -->
+<td> Ali</td>
+<td>Ahmadi </td>
+<td> 29</td>
+</tr>
+
+<tr> <!--Third row -->
+<td> Erfan</td>
+<td>khomami </td>
+<td> 31</td>
+</tr>
+
+</table>
+
+<br> <br> <br> <br> <br> <br> 
+<p>This is Tag &lt; a &gt;.</p>
+<a href = "#top">Back to Top</a>
+<!--Entities help defining concepts such as space by $nbsp; In below we have 5 spaces -->
+Hello &nbsp;&nbsp;&nbsp;&nbsp;Dear!
+<br> <br> <br> <br> <br> <br> <br> <br>
+
+<br> <br> 
+
+
+<br> <br> 
+<!--We code java script in the end of body tag. then we move it to a seperate file like css -->
+	<script type="text/javascript">
+        //alert(para.textContent);
+		var i = 1; 
+		//document.getElementById("paragraph1").innerHTML = "";
+		//alert(document.getElementById("paragraph0").innerHTML);
+		/*Javascript is so much cool.*/
+		//this function will execute everytime the button with id btnclick is pressed.
+		document.getElementById("btnClick").onclick = function(){  
+					document.getElementById("paragraph1").innerHTML += "<br /><b>Button is clicked!!" + i + "</b>";
+			i = i + 1;
+		}
+		/*A function to create a list when a button is pressed*/
+		//we don't add <ul> to add element to the same list
+		document.getElementById("btnCreateList").onclick = function(){  
+			document.getElementById("outputlist").innerHTML = "<li>HTML</li><li>CSS</li><li>Javascript</li><li>JQuery</li><li>Bootstrap</li>";
+		}
+			/*A function to add an element to a list when a button is pressed*/
+		document.getElementById("btnAppendList").onclick = function(){
+			document.getElementById("outputlist").innerHTML += "<li>ASP</li><li>PHP</li>";
+		}
+        //function to change an element and its properties
+        function ChangeElement(){
+          var paragraph = document.getElementById("paragraph1");//Getting the element paragraph1
+        paragraph.innerHTML = "This is a changed paragraph.";//changing the contents of paragraph1
+        paragraph.style.backgroundColor = "red"; //changing the background color of paragraph1
+        paragraph.style.color = "white"; //changing the color of paragraph1  
+        }
+		
+        if(section1.hasChildNodes){ //hasChildNodes are the sum of elements and enters in the parent tag
+            //childElementCount is the number of elements in the parent tag.
+            document.getElementById('length').innerHTML = section1.childElementCount;
+        }
+        
+        
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

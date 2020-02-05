@@ -1,0 +1,64 @@
+Laravel
+
+0 -make sure you installed WAMP or any other similar PHP servers. And Node.js too.
+
+1 - Download and install "composer" from:
+	https://getcomposer.org/download/
+	- when installing, choose latest version of PHP available (like 7.3.1)
+	
+2 - Use the following command to install laravel:
+	$ composer global require "laravel/installer"
+
+3 - Use the following command to create a laravel project:
+	$ composer create-project laravel/laravel your-project-name
+
+4 - Go to project directory:
+	$ cd your-project-name
+
+5 - Edit ".env" file and add database info:
+	DB_CONNECTION=mysql
+	DB_HOST=127.0.0.1
+	DB_PORT=3306
+	DB_DATABASE=your-database-name
+	DB_USERNAME=root
+	DB_PASSWORD=
+
+6 - Edit the "/app/providers/AppServiceProvider.php" file to:
+	<?php
+	namespace App\Providers;
+	
+	use Illuminate\Support\ServiceProvider;
+	use Illuminate\Support\Facades\Schema;
+	
+	class AppServiceProvider extends ServiceProvider
+	{
+		public function register()
+		{
+			//
+		}
+		
+		public function boot()
+		{
+			Schema::defaultStringLength(191);
+		}
+	}
+
+7 - Create required tables:
+	$ php artisan migrate
+
+8 - Serve the application:
+	$ php artisan serve
+	
+9 - Open http://localhost:8000
+
+10 - Create authentication scaffolding:
+	for laravel < 6
+		$ php artisan make:auth
+		$ php artisan migrate
+		$ php artisan serve
+	for laravel >= 6
+		$ composer require laravel/ui
+		$ php artisan ui vue --auth
+		$ npm install
+		$ npm run dev
+		$ php artisan serve

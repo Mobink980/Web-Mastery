@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!--for other characters beside english-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>First</title>
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            direction: ltr;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+        }
+
+        #header1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.0em;
+            font-weight: 700;
+            color: rgb(97, 87, 143);
+            margin-top: 0;
+        }
+
+        #dialog {
+            background-color: white;
+            color: black;
+        }
+
+        #pre {
+            background-color: #3a3939;
+            color: white;
+        }
+    </style>
+</head>ّ
+
+<body>
+    <!--To have an organized website, always put your elements in a div with class "row"-->
+    <div class="row">
+        <div class="container">
+            <h1 id="header1">Bootstrap</h1>
+            <hr />
+            <div id="why" class="btn btn-primary">Why bootstrap is amazing and you should master it?</div>
+            <br /><br />
+            <!--We have 4 different type of devices and we divide each device into 12 columns-->
+            <!--Setting the correct right of columns for elements for different type of devices-->
+            <div style="background-color: aqua;" class="col-lg-8 col-md-6 col-ms-6 col-xs-10">col-lg-8</div>
+            <!--sum of them always must be 12-->
+            <div style="background-color: crimson; " class="col-lg-4 col-md-6 col-ms-6 col-xs-10">col-lg-4</div>
+
+            <!--What we set for small devices would be set for larger devices automatically-->
+            <!--For instance, in below elements the width should always remain col-12 -->
+            <div style="background-color: rgb(12, 99, 66);" class="col-xs-12">col-lg-8</div>
+            <!--sum of them always must be 12-->
+            <div style="background-color: rgb(235, 51, 18); " class="col-xs-12">col-lg-4</div>
+            <div id="dialog" title="Basic dialog" style="display: none;">
+                <!--div for dialog-->
+                <p>
+                    This is a beautiful paragraph. It was a perfect conversation. It was a perfect conversation.
+                    It was a perfect conversation.
+                </p>
+            </div>
+            <br /><br />
+            <hr />
+            <!--We add class="blockquote-reverse" to the <blockquote> tag for Farsi text. -->
+            <blockquote>
+                <p>This is the reason that we are all in trouble. It's because of the hypocrisy and paranoia that is
+                    entrenched in the minds of people of Iran.
+                </p>
+                <footer>From a Great Leader</footer>
+            </blockquote>
+            <br /><br />
+            <hr />
+            <p>The <abbr title="World health organization">WHO</abbr> was founded in 1948.</p>
+        </div>
+
+        <hr />
+        <div class="container">
+            <h1>Code Snippets</h1>
+            <p>Inline snippets of code should be embedded in code elements.</p>
+            <p>The following HTML elements <code>span</code>, <code>section</code> and <code>div</code> define
+                a section in a document.</p>
+            <p>Use <kbd>ctrl + p</kbd> to open the print dialog box.</p>
+            <dl>
+                <dt>Coffee</dt>
+                <dd>Black Hot Drink!!</dd>
+                <dt>Milk</dt>
+                <dd>Cold White Drink!!</dd>
+            </dl>
+
+            <pre id="pre">
+                text in a pre element is displayed in a fixed width
+                font, and it preserves both          spaces and line breaks.
+            </pre>
+            <p>We will have scroll for the heights more than 350px</p>
+            <pre class="pre-scrollable col-xs-12">
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+                    text in a pre element is displayed in a fixed width
+                    font, and it preserves both          spaces and line breaks.
+
+            </pre>
+        </div>
+        <hr />
+        <!--The most bootstrap classes in typography start with text-->
+        <div class="container">
+            <h1>Contextual Color</h1>
+            <p class="lead">Typography</p>
+            <p>Use the contextual classes to provide meaning through colors:</p>
+            <p class="text-muted text-capitalize">This text is muted.</p>
+            <p class="text-primary">This text is important.</p>
+            <p class="text-success">This text indicates success.</p>
+            <p class="text-info">This text represents some information.</p>
+            <p class="text-warning">This text represents a warning.</p>
+            <p class="text-danger">This text represents danger.</p>
+            <p class="text-uppercase">Use the contextual classes to provide meaning through colors.</p>
+            <p class="text-lowercase">Use the contextual classes to provide meaning through colors.</p>
+        </div>
+
+        <hr />
+        <!--bg is for background-->
+        <div class="container">
+            <h1>Contextual Background</h1>
+            <p class="lead">Typography</p>
+            <p>Use the contextual classes to provide meaning through colors:</p>
+            <p class="bg-muted">This text is muted.</p>
+            <p class="bg-primary">This text is important.</p>
+            <p class="bg-success">This text indicates success.</p>
+            <p class="bg-info">This text represents some information.</p>
+            <p class="bg-warning">This text represents a warning.</p>
+            <p class="bg-danger">This text represents danger.</p>
+        </div>
+
+        <hr />
+
+        <div class="container">
+            <h1>Typography</h1>
+            <p class="text-left">text-left</p>
+            <p class="text-right">text-right</p>
+            <p class="text-center">text-center</p>
+            <!--spreads the text across the line-->
+            <p class="text-justify">text-justify.text-justify.text-justify.text-justify.text-justify.text-justify.</p>
+            <!--doesn't allow the text to go to the next line-->
+            <p class="text-nowrap">text-nowrap.text-nowrap.text-nowrap.text-nowrap.text-nowrap.text-nowrap.text-nowrap.
+            </p>
+            <p> <strong>Tip:</strong> Try to resize the browser window to see the behavior of justify and nowrap</p>
+        </div>
+
+        <div class="container">
+            <ul class="list-unstyled">
+                <li>Html </li>
+                <li>Css </li>
+                <li>Javascript </li>
+                <li>Bootstrap </li>
+            </ul>
+
+            <ul class="list-inline">
+                    <li>Milk</li>
+                    <li>Tea</li>
+                    <li>Coffee</li>
+                    <li>Juice</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="../jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="../jquery-ui-1.12.1/jquery-1.11.1.min.js"></script>
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link href="../jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+    <script src="../jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="../jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script>
+        $("#why").click(function () {
+            // alert("hello");
+            $("#dialog").dialog("open");
+        });
+
+        $("#dialog").dialog({ //creating a simple dialog
+            autoOpen: false,
+            modal: false,
+            width: 300,
+            height: 200,
+            resizable: true,
+            show: {
+                effect: "blind",
+                duration: 500
+            },
+            hide: {
+                effect: "explode",
+                duration: 1000
+            },
+            buttons: {
+                OK: function () { //we will close the dialog box
+                    $(this).dialog("close");
+                },
+                Cancel: function () { //we will close the dialog box
+                    $(this).dialog("close");
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

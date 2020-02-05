@@ -1,0 +1,3 @@
+FTP Server/Host: vscodeaccordian.freeoda.com
+FTP Login/Username: vscodeaccordian.freeoda.com
+FTP PassWord: 9r!Ys!V3cHJwUMf

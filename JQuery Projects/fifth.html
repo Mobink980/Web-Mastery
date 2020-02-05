@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>This is a page</title>
+    <script src="../jquery-ui-1.12.1.custom/jquery-3.4.1.js">
+    </script>
+
+    <style>
+        body {
+            text-align: center;
+            background-color:darkcyan;
+        }
+
+
+        button {
+            background-color: #980c33;
+            color: white;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color:#ff6a00;
+        }
+        #list ul{
+            text-align:center;
+            text-decoration:none;
+        }
+
+         #box {
+            width: 100px;
+            height: 100px;
+            border-radius: 5%;
+            background-color:darkviolet;
+            text-align:center;
+            margin: auto;   
+            padding: 100px 60px 60px 60px;
+            position:relative; /*position must be relative for the box to move by the buttons*/
+        }
+        #box text{
+            text-align:center;
+            padding: 100px 20px 20px 20px;
+        }
+
+        #navArrow{
+            position:relative;
+            width:150px;
+            height:150px;
+            margin: 100px auto; /*100px for top and down and auto for left and right to become centrelized*/
+            -webkit-border-radius: 100px; /*for different systems; Mozilla and chrome*/
+            -moz-border-radius: 100px;
+            border-radius: 100px; /*making a circle*/
+            padding:20px;
+            background-color:coral;
+        }
+        .navigationArrow{
+            position: absolute; /*absolute usually gets important when we want to determine top and left in an absolute manner.*/
+            left: 20px;
+            top: 20px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            padding: 0;
+            margin: 0;
+            color: #222;
+            background: white;
+            
+        }
+        /*The following is very important; because if we dont code them, all the buttons will fall above each other*/
+        #up{ /*setting up button*/
+            left: 50%;
+            margin-left: -25px;
+        }
+
+        #left, #right{ /*setting left and right button; we write them together, because they are same in some propertirs.*/
+            top: 50%;
+            margin-top: -25px;
+        }
+
+        #right{ /*setting right button*/
+            right: 20px;
+            left: inherit;
+        }
+
+        #down{ /*setting down button*/
+            top: inherit;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -25px;
+        }
+
+        .notify{
+            display:block;
+            font: 16px tahoma;
+            direction:rtl;
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: white;
+            padding: 20px;
+            text-align:center;
+            background-color:#cb9719;
+        }
+        .notify a{
+            color:olive;
+        }
+    </style>
+</head>
+<body>
+    <p class="notify">سلام دوست عزیز به دوره آموزشی مهندسی وب خوش آمدید <a href="fourth.html">لطفا عضو شوید</a>  </p>
+    <h1>Selectors JQuary</h1>
+    <h2 id="press">You did not pressed a key.</h2>
+    <div id="box"></div>
+    <br /> <br />
+           <div id="navArrow">
+               <button id="left" class="navigationArrow">&lArr;</button>
+               <button id="up" class="navigationArrow">&uArr;</button>
+               <button id="right" class="navigationArrow">&rArr;</button>
+               <button id="down" class="navigationArrow">&dArr;</button>
+           </div>
+    <form>
+        <label>
+            Name
+            <input id="firstname" type="text" />
+        </label>
+        <input id="submit" type="submit" />
+    </form>
+    <br />
+    <button id="changeWidth">Change width</button>
+    <h2>I'm level 2 heading</h2>
+    <p class="lead">and I'm the paragrapg tag with the class of "lead"</p>
+
+    <div class="lead">and I'm the div tag with the class of "lead"</div>
+    <div class="lead">
+        <p class="lead">and I'm the paragrapgh tag with the class of "lead" inside a div</p>
+    </div>
+    <div id="div1">
+        <h3>I'm level 3 heading</h3>
+    </div>
+    <div class="container">
+        <h3>I'm level 3 heading</h3>
+        <p>This is inside a <em>div</em> </p>
+        <div>
+            <h3>I'm level 3 heading</h3>
+        </div>
+    </div>
+
+    <div id="para">
+        <p>This is a paragraph tag inside a div.</p>
+    </div>
+    <h4>I'm level 4 heading</h4>
+    <button id="btnShow">Next</button>
+    <div id="list">
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+        </ul>
+    </div>
+    <br />
+    <button id="btnSelectItem">Select Items</button>
+
+
+    <script>
+        //General Template for using of JQuery
+        $("#btnSelectItem").click(function () { //click is an event in JQuery
+            //$(".lead").css("border", "2px solid red"); //make border for class lead
+            //$("h1, h2, h3, h4").css("border", "2px solid red");//make border for all the headings
+            //make border for h3 under div (applys to all children of div in each hierarchy)
+            //$("div h3").css("border", "2px solid red");
+            //$(".container h3").css("border", "2px solid red"); //in class container
+            //$(".container > h3").css("border", "2px solid red"); //in class container but directly
+            //$("p.lead").css("border", "2px solid red"); //Choose the paragraphs inside class lead
+            //Choose what has the class lead inside tag div,also div with class lead
+            //$("div.lead").css("border", "2px solid red");
+            //$("li").css("border", "2px solid red"); //make border for all li tags
+            // shebhe selector
+            //$("li:first").css("border", "2px solid red"); //make border for first li tags
+            //$("li:even").css("border", "2px solid red"); //make red border for even li tags
+            //$("li:odd").css("border", "2px solid blue"); //make blue border for odd li tags
+            //$("li:even").css("background", "red"); //make red background for even li tags
+            //$("li:odd").css("background", "green"); //make green background for odd li tags
+
+            //we shall not forget : for kazeb selectors.
+
+            /*selecting all elements containing the word 'level' in their text. For instance, tag h2 has level in it.
+             but also body and even html are selected because they are the parent of this tag.*/
+            //$(":contains('level')").css("border", "2px solid blue");
+            //$("div:contains('level')").css("border", "2px solid blue"); //limiting the search into the div tags.
+            $("h1").text("selectors jquery basic"); //get the contents of the tags h1 and change them to "selectors jquery basic"
+            //alert($("#div1").text()); //shows the h3 tag inside the div with the id div1
+
+            //alert($("body").text()); //shows all the texts inside the body tag
+            //alert($("body").html()); //give me the html of the body tag
+            //alert($("html").html()); //give me the html of the html tag
+
+            //events are nothing but the reaction of the elements in the page to the actions that the user does in the page.
+
+        });
+
+        //Happens when the square is selected
+        $("#box").click(function () { //click is an event in JQuery
+            //$("#box").text("This is a box");
+            $(this).text("This is a box"); //this refers to #box ("#box" is already selected and we don't need to do it again)
+
+        });
+
+        //makes the textbox red if focused
+        $("#firstname").focus(function () {
+            $(this).css("background", "red");
+        });
+
+
+        //makes the textbox yellow if the focus is taken away (clicking on the page)
+        $("#firstname").blur(function () {
+            if ($(this).val() == "") {
+                $(this).css("border", "2px solid red");
+                $(this).css("background", "yellow");
+                $("#box").text("Forgot to mention your name!!");
+            }
+            else {
+                $(this).css("background", "green");
+                $(this).css("border", "2px solid white");
+                $("#box").text("Good; you're all done!!");
+            }
+
+        });
+
+        //do something when textbox is hovered
+        //the function in the first argument happens when the mouse comes on the box
+        //the function in the second argument happens when the mouse exits the box
+        //Unlike the css, where hover would remained only if the mouse was hovering on the element.
+        $("#box").hover(function () {
+            $(this).text("ha ha ha!!");
+        }, function () {
+            $(this).css("background", "red");
+        });
+
+        var click = 0;
+        //keydown is first executed then keypressed then keyup
+        $("#firstname").keypress(function () {
+            click++;
+            //Below, we do chain call. Performing the style on returned element.
+            //$("#press").text("clicked " + click + " times").css("background", "red").css("color", "white").css("font-size", "20px");
+            //We can even avoid writing .css multiple time and do this.
+            $("#press").text("clicked " + click + " times").css({ "background": "red", "color": "white", "font-size": "20px" });
+            //$("#press").css("background", "red");
+            //$("#press").css("color", "white");
+            //$("#press").css("font-size", "20px");
+        });
+        //hide the top line
+        $(".notify").hide();
+        //fade in the top line when the key is pressed
+        $("#btnShow").click(function () {
+            //$(".notify").delay(500).fadeIn(1000); //it delays the execution of fade in for 500 milliseconds 
+            $(".notify").delay(500).slideDown(1000).delay(2500).fadeOut(1000);
+        });
+
+        //Creating JQuery Animations
+        //we can give the duration to animation as the second parameter
+        $("#changeWidth").click(function () { //Changing the width of the box, when changeWidth button is clicked
+            $("#box").animate(
+                {
+                width: "65px"
+                },
+                //duration
+                50
+                //call to invoke when animation is finished
+                , function () {
+            });
+        });
+
+        $("#left").click(function () {//it makes the box go left 100px, each time left button is clicked
+            $("#box").animate({ //we can use more than one animation per button
+                left: ["-=100px", "swing"], //swing makes the animation slow, fast and then slow.
+                opacity: "0.8"
+            },
+        //duration
+          1000,
+        function () {
+            });
+        });
+
+        $("#right").click(function () {//it makes the box go left 100px, each time left button is clicked
+          $("#box").animate({ //we can use more than one animation per button
+                left: ["+=100px", "swing"], //swing makes the animation slow, fast and then slow.
+                opacity: "0.8"
+          },
+         //duration
+          1000,
+        function () {
+            });
+        });
+
+        $("#up").click(function () {//it makes the box go left 100px, each time left button is clicked
+          $("#box").animate({ //we can use more than one animation per button
+                top: ["-=100px", "swing"], //swing makes the animation slow, fast and then slow.
+                opacity: "0.8"
+          },
+          //duration
+          1000,
+          function () {
+            });
+        });
+
+        $("#down").click(function () {//it makes the box go left 100px, each time left button is clicked
+          $("#box").animate({ //we can use more than one animation per button
+                top: ["+=100px", "swing"], //swing makes the animation slow, fast and then slow.
+                opacity: "0.8"
+          },
+         //duration
+          1000,
+          function () {
+            });
+        });
+
+    </script>
+</body>
+</html>

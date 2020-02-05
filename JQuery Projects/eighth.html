@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JQuery Selectors</title>
+
+    <link href="../jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+
+    <script src="../jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="../jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+
+    <style>
+        body {
+            text-align: center;
+        }
+        .container{
+            border: 1em solid rgb(211, 183, 57);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <img id="pic" src="Images/warren.jpg"  alt="Warren"/>
+        <p>This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.</p>
+        <h1>Heading one 2</h1>
+        <h2 id="head">Heading two</h2>
+        <p>This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.</p>
+        <h4 class="heading4">Heading four</h4>
+        <p>This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.</p>
+        <p id="paragraph1">This is a paragraph. This is a paragraph. These are 2 paragraphs. This is a paragraph.</p>
+        <p id="graph3para">This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.</p>
+        <p id="paragraph2">This is a paragraph. This is a paragraph 2. This is a paragraph. This is a paragraph.</p>
+        <br /> <br />
+        <a id="link1">link1</a>
+        <a id="link2" href="http://www.sanjesh.org">link2</a>
+        <a id="link3">link3</a>
+        <ul class="box box-4">
+            <li>Cofee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Neskafe</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Neskafe</li>
+            <li>Breasilian Nuts</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Neskafe</li>
+            <li>Potato Chips</li>
+        </ul>
+        <br /> <br />
+
+        <ul class="box box-4">
+            <li>Milk</li>
+            <li id="link3">Neskafe</li>
+            <li>Potato Chips</li>
+        </ul>
+
+        <div id="header">
+            <p>hello. hello hello hello hello</p>
+            <p>hello. hello hello hello hello</p>
+        </div>
+        <p>bye bye bye bye bye bye bye bye bye bye bye</p>
+        <p>bye bye bye bye bye bye bye bye bye bye bye</p>
+        <p>bye bye bye bye bye bye bye bye bye bye bye</p>
+        <br />
+        <a href="https://www.google.org">hi</a>
+        <a hhref="https://www.google.ir">why</a>
+        <a href="https://www.google.net">bye</a>
+        <a id="link1" href="https://www.google.com">guy</a>
+        <br />
+        <input id="link1" value="Hi" type="button" />
+        <br /> <br />
+        <input class="box" id="box4" value="Hi" type="button" />
+        <br /> <br />
+        <input value="Hi" type="button" />
+        <p>This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.</p>
+        <h4 class="box">Heading four</h4>
+        <p>This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.</p>
+        <p>This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.</p>
+    </div>
+        <p id="input1" class="group1">This is a paragraph. This is a paragraph.</p>
+        <p id="input2" class="group1">This is a paragraph. This is a paragraph.</p>
+        <p id="input3" class="group1">This is a paragraph. This is a paragraph.</p>
+        <p id="input4" class="group1">This is a paragraph. This is a paragraph.</p>
+        <p id="input5" class="group1">This is a paragraph. This is a paragraph.</p>
+        <p id="input6" class="group1">This is a paragraph. This is a paragraph.</p>
+
+        <div id="input9" class="group1">
+            <textarea id="input7" class="group1">Example 1</textarea>
+        </div>
+
+        <br /> <br />
+        <iframe id="input8" width="500px" height="300px" src="Images/Trump.jpg"></iframe>
+      
+    <script>
+        //General Selectors
+        //$("*").css("border", "5px solid green"); //selecting all elements
+       //$("p").css("border", "5px solid green"); //selecting paragraphs
+        //$("#head").css("border", "5px solid green"); //selecting the element with id head
+        //$(".heading4").css("border", "5px solid green"); //selecting the element with class heading4
+        // $(".heading4, #link1").css("border", "5px solid green"); //selecting the element with class heading4, also with id link1
+        //$(".box.box-4").css("border", "5px solid green"); //selecting elements that are the class box and also the class box4 (AND)
+        //$("ul").css("border", "5px solid green"); //selecting ul elements
+        //$("h1, div, p").css("border", "5px solid green"); //selecting h1, div, and p elements
+
+        //Filtering elements (We can use filtering for the class and id aas well as tags)
+        //$("p:first").css("border", "5px solid green"); //only first paragraph
+        //$("p:last").css("border", "5px solid green"); //only last paragraph
+        //$("li:even").css("border", "5px solid green"); //only even elements of the list
+       // $("li:odd").css("border", "5px solid green"); //only odd elements of the list
+        //$(".box:first").css("border", "5px solid green");//first element of the classes with name box
+        //$("p:gt(1)").css("border", "5px solid green");//select elements with index greater than one
+        //$("p:lt(3)").css("border", "5px solid green");//select elements with index less than 3
+        //$("li:eq(2)").css("border", "5px solid green");//select element with index equal to 2
+        //$("p:not(p:eq(2))").css("border", "5px solid green");//select all paragraphs instead the one with the index 2
+
+        //Attribute Selectors
+        //$("p[id^='para']").css("border", "5px solid green"); //selecting paragraphs that have 'para' as first part of their id
+        //$("p[id*='3']").css("border", "5px solid green"); //selecting paragraphs that have '3' as a part of their id (Anywhere)
+        //$("p[id$='para']").css("border", "5px solid green"); //selecting paragraphs that have 'para' as last part of their id
+        //$("[href$='.net'], [href$='.org']").css("border", "5px solid green"); //selecting elements that have href .net or .org (at the end)
+
+        //Content filters
+        //$("p:contains('2')").css("border", "5px solid red"); //selecting paragraphs that have 2 in their contents
+        //$(":contains('2')").css("border", "5px solid red"); //selecting all elements that have 2 in their contents
+        //$("ul:parent").css("border", "5px solid red"); //selecting all the ul elements that are parent
+        //$("ul:has(li[id = 'link3'])").css("border", "5px solid red"); //selecting the ul that one of its li tags has an id = link3
+        //$("a[id = 'link1']").css("border", "5px solid red"); //return the <a> elements with id = link1
+        //$("ul li:nth-child(2)").css("border", "5px solid red"); // select the li elements that are the second child of ul tags
+        //n is 0, 1, 2, 3, 4, ...
+        //$("ul li:nth-child(2n+1)").css("border", "5px solid red"); // select the li elements that are the 2n+1 child of ul tags(odd ones)
+        //$("ul li:nth-child(3n)").css("border", "5px solid red"); // select the li elements that are the 3n child of ul tags
+        //$("div > p").css("border", "5px solid #6459ff"); // select the <p> elements that are the direct child of a div tag
+        //$("div p").css("border", "5px solid #6459ff"); // select the <p> elements that are the child of a div tag (direct or indirect)
+        //$("div + p").css("border", "5px solid #6459ff"); //return the first <p> tag that is after a <div> tag
+        // $("div ~ p").css("border", "5px solid #6459ff"); //return all the <p> tags that are after a <div> tag
+
+        //alert($("#paragraph1").text()); printing the text of paragraph1
+        // alert($("#pic").width()); //printing the width of the picture
+        // alert($("#pic").height()); //printing the height of the picture
+        // $("#paragraph1").text("Hello! Changed"); //changing the text of the paragraph with id paragraph1
+        //printing the src attribute of the element plus changing its height and width
+        //alert($("#pic").width(320).height(400).attr("src")); 
+        //printing the href attribute of the <a> tag with id link2 and change it
+        // alert($("a#link2").attr("href", "https://www.google.com")); 
+        //changing the css properties
+        // $("a#link2").css("border", "2px solid black").css("border-radius", "3px").css("color", "red");
+        //for changing the properties we use attr rather than prop
+        // alert($("#pic").attr("width"));  //no width attribute is defined
+        // alert($("#pic").prop("width")); //prop is the properties in the browser
+
+        var element1 = $("<h1></h1>").text("Great"); // create a header and assign it to variable element1
+        // $("#header").append(element1); //put it at the last of the element with id header(inside)
+        // $("#header").prepend(element1); //put it at first of the element with id header (inside)
+        // $("#header").after(element1); //put it exactly after the element with id header (outside)
+        $("#header").before(element1); //put it exactly before the element with id header (outside)
+
+        var myImage = $("<img />");
+        myImage.attr("src", "Images/kamala.png");
+        // myImage.width(200);
+        myImage.attr({
+            width: "20",
+            height: "20",
+            display: "inline"
+        });
+        //myImage.text("This is a sample"); //a text for the image
+        // $(".container").append(myImage); //putting the image at the end of the class container
+        // $(".container").after(myImage); //putting the image after the class container
+        $(".container").prepend(myImage);//putting the image at the first of the class container
+        //The first function works when we move the cursor on the picture
+        myImage.hover(function(){ //The second function works when we remove the cursor from the picture
+            $(this).css("opacity", "0.7");
+            $(this).css("border", "0px solid rgb(23, 250, 90)");
+            $(this).animate({"border-width": "10px"}, 400, "swing");
+
+        }, function(){
+            $(this).css("opacity", "1.0");
+            $(this).css("border", "0px");
+        });
+
+        $("a").prepend(myImage); //prepend the image for all <a> tags
+        // alert($("a").length); //printing the number of <a> tags
+        // $("a, p, div, h1").each(function(index, element){ //printing all the a, p, div, h1 elements by their type
+        //     var name = (index + 1) + " " + element.tagName;
+        //     alert(name);
+        // });
+
+            //select all the elements with class group1 and find the children of them with id input7 (direct or indirect)
+            alert($(".group1").find("#input7").html());
+        $("[id ^= 'input']").click(function(){ //In the elements that have input as a part of their id, do the stuff below
+        //each of these instructions work on some of the elements
+            // alert($(this).val()); //works on textarea but not paragraphs
+            alert($(this).text());
+            // alert($(this).html()); //works on paragraphs but not textarea
+            $("#input8").toggle(); //make the element with id input8 appear and disappear each time the function executes
+        });
+    </script>
+</body>
+</html>

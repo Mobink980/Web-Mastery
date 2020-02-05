@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>This is a page</title>
+    <script src="../jquery-ui-1.12.1.custom/jquery-3.4.1.js">
+    </script>
+
+    <style>
+        body{
+            text-align:center;
+        }
+        #box{
+            width:200px;
+            height:200px;
+            background-color:coral;
+            margin: 0 auto;
+            text-align:center;
+            line-height:200px;
+        }
+        .thing{
+            width:200px;
+            height:200px;
+            background-color:#b6ff00;
+            margin: 20px auto;
+            text-align:center;
+            line-height:200px;
+            border-top-left-radius:200px;
+        }
+        button{
+            background-color:aqua;
+            color:white;
+            padding:10px;
+            border: 2px solid black;
+            border-radius:5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>JQuary basic syntax</h2>
+    <p></p>
+    <div id="box">a box</div>
+    <div class="thing">a thing</div>
+    <br />
+    <button id="btnGo">Go!!</button>
+    <script>
+        //General Template for using of JQuery
+        /*JQuery helps to make our pages dynamic.*/
+        //We connect the elements by using selectors; and jquery helps us to use javascript more efficiently.
+        //The function is written completely between open and close parantheses after $ sign.
+        //selection of elements in jquery : $("p").action() //action on paragraphs
+        $(function () {
+           // alert("Hiii!!");
+        });
+        /*The rules for connection to elements in css apply here; 
+        we use '.' for classes, '#' for id, and the name of tags for connection to the tags.
+        there is no need to put anything behind the tags for connection. In jquery like css, we call it body, p, div,
+        for connection to theese elements.*/
+
+        $("#box").hide(); //hide the box
+        $("#box").show(1000); //show after 2 seconds
+        $("#box").fadeOut(1500); //fadout after 3 seconds
+
+        $("#btnGo").click(function () { //show the faded shape after 2 seconds
+            $("#box").fadeIn(1500, function () { //it will put the border after fadeIn
+                $("#box").css("border", "3px solid blue"); //using the css to change the border of the shape.(happens after the fade in)
+            }); //fadeIn after 2 seconds
+             //$("#box").css("border", "3px solid blue");//this wont wait for the execution of fadeIn
+        });
+
+        //$(".thing").fadeOut(3000); //fadout after 3 seconds
+
+    </script>
+</body>
+</html>

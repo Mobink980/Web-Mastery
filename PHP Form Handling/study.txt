@@ -1,0 +1,7 @@
+https://www.w3schools.com/php/
+https://www.w3schools.com/php/php_forms.asp
+
+PHP Server:
+http://www.wampserver.com/en/
+Or
+https://www.apachefriends.org/index.html
