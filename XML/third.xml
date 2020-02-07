@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE courses [
+<!ELEMENT courses (course)>
+<!ELEMENT course (name, duration, desc)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT duration (#PCDATA)>
+<!ELEMENT desc (#PCDATA)>
+]>
+
+<courses> 
+<course>
+<name>XML and Tools</name>
+<duration>02:50:00</duration>
+<desc>In This video</desc>
+</course>
+</courses>
+
+<!--In DTD or document type definition, whatever we write in our root tag which is 
+courses in this case, must obey the rules defined in the DOCTYPE tag-->
+<!--These Information are filled by the program-->
