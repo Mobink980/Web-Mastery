@@ -1,20 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE courses [
-<!ELEMENT courses (course)>
-<!ELEMENT course (name, duration, desc)>
+<!DOCTYPE contents [
+<!ELEMENT contents (content+)>
+<!ELEMENT content ((name, duration, desc, caption*) | (name, author, year, desc, caption*))>
 <!ELEMENT name (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
 <!ELEMENT duration (#PCDATA)>
 <!ELEMENT desc (#PCDATA)>
+<!ELEMENT caption (#PCDATA)>
+
+<!-- + (one time or more)  *(zero time or more)  ?(zero time or one time) -->
+<!-- the | sign means that only one of the conditions must be true (XOR) -->
+<!-- 
+    At least 3 captions:
+    caption,caption,caption+  or caption,caption,caption,caption*
+
+    At most 4 captions:
+    caption?,caption?,caption?,caption?
+
+    These techniques are not recommended in TDD but is a way to get more options
+ -->
+ <!-- attributes are added to the start tag of elements and give us information about how to 
+ process them in a specific way especially for the program which uses this contents -->
+ <!ATTLIST content id CDATA #IMPLIED> 
+ <!ATTLIST year release (1395|1396|1397) #IMPLIED> 
+ <!ATTLIST year release CDATA #FIXED "1395"> 
+ <!-- #IMPLIED is used when id attribute is not defined for a content. When using constant 
+ values for our attributes, we should use #FIXED. If we use #REQUIRED then the attribute must be set -->
 ]>
 
-<courses> 
-<course>
+<contents> 
+
+<content id="1">
+<name>XLST 2.0 and Applications</name>
+<author>Mohammad</author>
+<year>2035</year>
+<desc>In This video we will learn ...</desc>
+</content>
+
+<content id="2">
 <name>XML and Tools</name>
 <duration>02:50:00</duration>
 <desc>In This video</desc>
-</course>
-</courses>
+<caption>1</caption>
+<caption>2</caption>
+<caption>3</caption>
+</content>
+
+<content id="3">
+<name>XLST 2.0 and Applications</name>
+<duration>08:20:00</duration>
+<desc>In This video we will learn ...</desc>
+</content>
+
+</contents>
 
 <!--In DTD or document type definition, whatever we write in our root tag which is 
-courses in this case, must obey the rules defined in the DOCTYPE tag-->
+contents in this case, must obey the rules defined in the DOCTYPE tag-->
+<!-- The sequence of the elements inside an element tag should be the same with the sequence of the 
+arguments defined in the DOCTYPE tag for that element. Also, all the elements defined in the DOCTYPE tag
+must be present in the tag -->
 <!--These Information are filled by the program-->

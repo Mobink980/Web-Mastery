@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Models</title>
+        <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    </head>
+    <body class="container">
+        <br><br><br>
+        <p id="para1">
+            <i>
+                "The W3C Document Object Model (DOM) is a platform and language-neutral interface that 
+                allows programs and scripts to dynamically access and update the content, structure, 
+                and style of a document."
+            </i>
+        </p>
+
+        <p>The W3C DOM standard is separated into 3 different parts:</p>
+        <ul id="list1">
+            <li>Core DOM - standard model for all document types</li>
+            <li>XML DOM - standard model for XML documents</li>
+            <li>HTML DOM - standard model for HTML documents</li>
+        </ul>
+        <p>The XML DOM defines the <b>objects, properties, and methods </b> of all XML elements.</p>
+        <p>The XML DOM is:</p>
+        <ul id="list2">
+            <li>A standard object model for XML</li>
+            <li>A standard programming interface for XML</li>
+            <li>Platform and Language independent</li>
+            <li>A W3C Standard</li>
+        </ul>
+
+        <!-- Attributes are usually started with data dash -->
+        <div id="output" data-click="Hello()" class="selected btn btn-primary" lang="en" dir="ltr" title="This is a div tag">
+            Hello Dear!!
+        </div>
+
+        <ul>
+            <li><a href="https:\\www.google.com">Google</a></li>
+            <li><a href="https:\\www.yahoo.com">Yahoo</a></li>
+            <li><a href="https:\\www.bing.com">bing</a></li>
+        </ul>
+        <script>
+            var element = document.getElementById("para1");
+
+            if(element.nodeType = Node.ELEMENT_NODE){
+                element.innerHTML += "(Element Node)";
+            }
+
+            var list1 = document.getElementById("list1");
+            
+            var list2 = document.getElementById("list2");
+
+            //remove the first element of list1 and append it to list2
+            // list2.append(list1.firstElementChild); 
+
+            //Instead of above, we can do the following instead
+            //delete the first element of list1 and store it in returnedElem
+            // var returnedElem = list1.removeChild(list1.firstElementChild);
+            // list2.appendChild(returnedElem); //append it to the last
+
+            //put first element of list1 as the third element of list2
+            list2.insertBefore(list1.firstElementChild, list2.firstElementChild.nextElementSibling.nextElementSibling); 
+
+            //replace the first element of the list1 with the first element of list2
+            var replaceItem = list2.replaceChild(list1.firstElementChild, list2.firstElementChild);
+            // alert(replaceItem.textContent);
+
+            //Accessing the attributes of a tag
+            var myDivTag = document.getElementById("output");
+
+            // alert("id: " + myDivTag.id);
+            // alert("class: " + myDivTag.className);
+            // alert("Language: " + myDivTag.lang);
+            // alert("direction: " + myDivTag.dir);
+            // alert("title: " + myDivTag.title);
+            alert("Classes: " + myDivTag.classList);
+            myDivTag.className = "Class1 btn btn-primary"; //changing the first class
+            alert("First Class: " + myDivTag.classList[0]);
+            alert("Length of Classes: " + myDivTag.classList.length);
+            alert("click is: " + myDivTag.getAttribute("data-click"));
+            myDivTag.setAttribute("data-click", "dbClick"); //the second argument is the name of attribute
+            alert("click is: " + myDivTag.getAttribute("data-click")); //print the name of the changed attribute
+
+            var link = document.getElementsByTagName("a")[1]; //get the second link
+            //change the href attribute of the link
+            link.href = "https://www.google.com"; //must contain http:// or https:// for the right address
+            alert(link.href + " ==> The href has changed from yahoo to google"); //print its href attribute
+
+
+        </script>
+    
+    </body>
+</html>
