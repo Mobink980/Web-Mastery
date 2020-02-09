@@ -2,9 +2,9 @@
 <html>
     <head>
         <title>DOM Models</title>
-        <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css"> -->
     </head>
-    <body class="container">
+    <body>
         <br><br><br>
         <div id="master">
 
@@ -45,6 +45,8 @@
 
         <input id="btnDelete" type="button" value="Delete" onclick="deleteNode(node)">
     </div>
+
+    
         <script>
             var element = document.getElementById("para1");
 
@@ -95,7 +97,7 @@
             //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CREATING SOME ELEMENTS DYNAMICALLY
             var myDiv = document.createElement("div"); //create a div tag and put it in myDiv variable
             myDiv.textContent = "This is the div tag that is dynamically appended to the body tag."; //put some content in the created div tag
-            document.body.appendChild(myDiv); //append the created div as a child to the body tag
+            // document.body.appendChild(myDiv); //append the created div as a child to the body tag
 
             var myPara = document.createElement("p"); //create a p tag 
             var text1 = document.createTextNode("This is a paragraph 1");//textNode are the tags that have contents inside
@@ -105,7 +107,7 @@
             myPara.appendChild(text1);
             myPara.appendChild(text2);
             myPara.appendChild(text3);
-            document.body.appendChild(myPara); //append the created paragraph as a child to the body tag
+            // document.body.appendChild(myPara); //append the created paragraph as a child to the body tag
             //change the content of text1
             text1.textContent = "This is changed!!!!!!!!!!";
 
@@ -139,6 +141,11 @@
             myPara.setAttributeNode(attr2);
             myPara.setAttributeNode(attr3);
 
+            //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using the libraries
+            var masterDiv = document.getElementById("master"); //Adding class container to the div with the id master
+            masterDiv.setAttribute("class", "container");
+            masterDiv.appendChild(myPara); //append myPara to the masterDiv
+            masterDiv.appendChild(myDiv); //append myDiv to the masterDiv
             //Accessing attributes by their name (attribute by the name ng-click)
             var attrValue = myPara.attributes["ng-click"].value; 
             // alert(attrValue); //printing the value of the attribute
@@ -158,8 +165,12 @@
 
             }
 
-            loadScript("jquery.js"); //If this link is real, then we can use JQuery library 
-            loadStyle("Bootstrap.css"); //using bootstrap framework
+            //These will take effect by a delay
+            loadScript("../jquery-ui-1.12.1/jquery-ui.js"); //Using JQuery library 
+            //using bootstrap framework
+            loadStyle("../bootstrap-3.3.7-dist/css/bootstrap.css"); 
+            //bootstrap.js uses the jQuery scripts so it should be defined after jquery.js
+            loadScript("../bootstrap-3.3.7-dist/js/bootstrap.js"); 
         </script>
     
     </body>

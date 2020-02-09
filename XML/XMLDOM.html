@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>XML DOM Models</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css">
+    </head>
+    <body>
+        <div id="master">
+
+            <div id="output" class="table-responsive">
+                contents
+            </div>
+        </div>
+
+        <script>
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    TraversingXML(this);
+                }
+            };
+
+            xmlhttp.open("GET", "contents.xml", true);
+            xmlhttp.send();
+
+            function TraversingXML(xml){
+                var xmlDoc = xml.responseXML; //Read the xml file and put it in xmlDoc variable
+
+                var content = xmlDoc.getElementsByTagName('content')[0];
+
+                alert(xmlDoc.getElementsByTagName('content').length());
+                // alert(xmlDoc.getElementsByTagName('content')[0].firstElementChild.textContent);
+
+                var contentNodes = content.childNodes;
+                var txt = "";
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Models</title>
+    </head>
+    <body>
+        <br><br><br>
+        <div id="master">
+
+        
+        <p id="para1">
+            <i>
+                "The W3C Document Object Model (DOM) is a platform and language-neutral interface that 
+                allows programs and scripts to dynamically access and update the content, structure, 
+                and style of a document."
+            </i>
+        </p>
+
+        <table class="table table-striped table-hover">
+            <tr>
+                <td>cell 1</td>
+                <td>cell 2</td>
+            </tr>
+
+            <tr>
+                <td>cell 3</td>
+                <td>cell 4</td>
+            </tr>
+
+            <tr>
+                <td>cell 5</td>
+                <td>cell 6</td>
+            </tr>
+
+            <tr>
+                <td>cell 7</td>
+                <td>cell 8</td>
+            </tr>
+        </table>
+
+        <ul>
+            <li><a class="bg-primary text-white" href="https:\\www.google.com">Google</a></li>
+            <li><a class="bg-success text-white" href="https:\\www.yahoo.com">Yahoo</a></li>
+            <li><a class="bg-dark text-white" href="https:\\www.bing.com">bing</a></li>
+        </ul>
+
+        <input id="btnDelete" type="button" value="Delete" onclick="deleteNode(node)">
+        
+    </div>
+    <script>
+
+
+        //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using the libraries
+        var masterDiv = document.getElementById("master"); //Adding class container to the div with the id master
+        masterDiv.setAttribute("class", "container");
+
+        var btnDelete = document.getElementById("btnDelete");
+        btnDelete.setAttribute("class", "btn btn-outline-warning");
+
+        var table = document.createElement("table");
+        var tbody = document.createElement("tbody");
+        var row1 = document.createElement("tr");
+        var row2 = document.createElement("tr");
+        tbody.appendChild(row1);
+        tbody.appendChild(row2);
+        var cell1 = document.createElement("td");
+        cell1.textContent = "cell 1";
+        var cell2 = document.createElement("td");
+        cell2.textContent = "cell 2";
+        row1.appendChild(cell1);
+        row1.appendChild(cell2);
+
+        var cell3 = document.createElement("td");
+        cell3.textContent = "cell 3";
+        var cell4 = document.createElement("td");
+        cell4.textContent = "cell 4";
+        row2.appendChild(cell3);
+        row2.appendChild(cell4);
+
+        table.appendChild(tbody);
+        table.setAttribute("class", "table table-striped table-hover");
+        table.setAttribute("style", "margin-top:20px");
+        masterDiv.appendChild(table);
+
+        function loadScript(url){
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = url;
+            document.body.appendChild(script);
+
+        }
+        function loadStyle(url){
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = url;
+            document.head.appendChild(link);
+
+        }
+
+        //These will take effect by a delay
+        loadScript("../jquery-ui-1.12.1/jquery-ui.js"); //Using JQuery library 
+        //using bootstrap framework
+        loadStyle("../bootstrap-4.3.1-dist/css/bootstrap.css"); 
+        //bootstrap.js uses the jQuery scripts so it should be defined after jquery.js
+        loadScript("../bootstrap-4.3.1-dist/js/bootstrap.js"); 
+    </script>
+
+</body>
+</html>

@@ -9,6 +9,23 @@
 <!ELEMENT desc (#PCDATA)>
 <!ELEMENT caption (#PCDATA)>
 
+ <!-- according to DOM, everything in an XML document is a node -->
+ <!-- 
+     The above of all elements stays the root in this case contents. It is necessary to have only one root.
+     Every node except the root, has exactly one parent node but can have many children (like a tree)
+     The nodes with the same parents are called siblings.
+     The most common way to access an element in an XML document is through getElementByTagName. (In html we usually use
+     getEgetElementById) 
+  -->
+  <!-- 
+
+      nodeType = 1 ==> element node
+      nodeType = 2 ==> attribute node
+      nodeType = 3 ==> text node
+      nodeType = 8 ==> comment node
+      nodeType = 9 ==> document node
+      
+   -->
 <!-- + (one time or more)  *(zero time or more)  ?(zero time or one time) -->
 <!-- the | sign means that only one of the conditions must be true (XOR) -->
 <!-- 
@@ -22,6 +39,7 @@
  -->
  <!-- attributes are added to the start tag of elements and give us information about how to 
  process them in a specific way especially for the program which uses this contents -->
+
  <!ATTLIST content id CDATA #IMPLIED> 
  <!ATTLIST year release (1395|1396|1397) #IMPLIED> 
  <!ATTLIST year release CDATA #FIXED "1395"> 
@@ -52,6 +70,56 @@
 <duration>08:20:00</duration>
 <desc>In This video we will learn ...</desc>
 </content>
+
+<content id="4">
+<name>XLST 3.0 and Applications</name>
+<duration>08:20:00</duration>
+<desc>In This video we will learn ...</desc>
+</content>
+
+<content id="5">
+<name>XLST 4.0 and Applications</name>
+<duration>08:20:00</duration>
+<desc>In This video we will learn ...</desc>
+</content>
+
+<content id="6">
+<name>Go and Applications</name>
+<duration>08:20:00</duration>
+<desc>In This video we will learn ...</desc>
+</content>
+
+<content id="7">
+<name>R and Applications</name>
+<duration>08:20:00</duration>
+<desc>In This video we will learn ...</desc>
+</content>
+
+<content id="8">
+<name>Java and XML</name>
+<duration>08:20:00</duration>
+<desc>In This video we will learn ...</desc>
+</content>
+
+<content id="9">
+<name>Ruby and Applications</name>
+<duration>08:20:00</duration>
+<desc>In This video we will learn ...</desc>
+</content>
+
+<content id="10">
+<name>Python and Applications</name>
+<duration>08:20:00</duration>
+<desc>In This video we will learn ...</desc>
+</content>
+
+<content id="11">
+<name>Perl and Applications</name>
+<duration>08:20:00</duration>
+<desc>In This video we will learn ...</desc>
+</content>
+
+
 
 </contents>
 
