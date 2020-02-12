@@ -50,7 +50,7 @@
 <contents> 
 
 <content id="1">
-<name>XLST 2.0 and Applications</name>
+<name>XLST 1.5 and Applications</name>
 <author>Mohammad</author>
 <year>2035</year>
 <desc>In This video we will learn ...</desc>
@@ -119,6 +119,12 @@
 <desc>In This video we will learn ...</desc>
 </content>
 
+<content id="12">
+<name>XML Professional</name>
+<author>Maziar Mousavi</author>
+<year>2025</year>
+<desc>In This book we will learn ...</desc>
+</content>
 
 
 </contents>

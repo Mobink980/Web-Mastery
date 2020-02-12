@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>XML DOM Models</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+    </head>
+    <body>
+        <div id="master">
+
+            <div id="output" class="table-responsive">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Author</th>
+                            <th>Duration</th>
+                            <th>Year</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        <script>
+            var xhttp = new XMLHttpRequest(); //create a request to read the xml file via ajax
+            xhttp.onreadystatechange = function() { //Upon reading, run this function
+                if (this.readyState == 4 && this.status == 200) {// If reading the xml file was successful
+                    TraversingXML(this); //execute this function
+                }
+            };
+
+            xhttp.open("GET", "contents.xml", true); //sending the request to the server
+            xhttp.send();
+
+            function TraversingXML(xml){ 
+                
+                var xmlDoc = xml.responseXML; //Read the xml file and put it in xmlDoc variable                
+                var contents = xmlDoc.getElementsByTagName('content'); //read each content tag in the xml file
+                var output = document.getElementById("output"); //Get the div with the id = "output"
+                var txt = "";
+                var headers = ["name", "author", "duration", "year", "desc"]; //the sequence must match to the defined sequence
+                var table = document.getElementById("table"); //Get the table with the id="table"
+                var tbody = document.createElement("tbody"); //create element tbody
+                
+                //style the table with bootstrap dynamically
+                table.setAttribute("class", "table table-striped table-hover table-bordered");
+
+                for(var i = 0; i < contents.length; i++){ //It will repeat to the number of received contents
+                    var row = document.createElement("tr"); //create tr element
+                    var column = document.createElement("td"); //create td element
+                    //get the id attribute from each content tag in the xml file and write it into the created td
+                    //innerHTML allows the contents such as "<span>" to be interpreted, while textContent looks at it as a string
+                    column.innerHTML = "<span class= 'glyphicon glyphicon-asterisk'>" + contents[i].getAttribute("id") + "</span>"; 
+                    row.appendChild(column); // append the created column to row
+
+                    for(var j = 0; j < headers.length; j++){ //traverse to the number of elements in the headers
+                        if(contents[i].getElementsByTagName(headers[j]).length > 0){ //if the specific header in xml file isn't empty
+                            text = contents[i].getElementsByTagName(headers[j])[0].textContent; //put its content in variable text
+                        
+                        }else{ //if that specific header does not exist or empty
+                            text = ""; //put an empty string into the text
+                        }
+                        var column = document.createElement("td"); //creating a td element for each header
+                        column.textContent = text; //put the variable text in the created td
+                        row.appendChild(column); //append it to the created tr
+                    }
+                    tbody.appendChild(row); //append row to tbody. We need tbody to style table with bootstrap
+                }
+                table.appendChild(tbody); //after all the rows has been appended to tbody, append tbody to the table
+                output.appendChild(table); //append the table to the div with the id="output" as the final table
+            }
+            var mainDiv = document.getElementById("master"); //get the div by id = "master"
+            mainDiv.setAttribute("class", "container"); //give it a style by bootstrap
+        </script>
+
+    </body>
+</html>
