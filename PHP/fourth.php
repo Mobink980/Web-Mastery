@@ -39,6 +39,13 @@ integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifw
         function printContent($content){
             echo "<div class='alert alert-dark'>$content</div>";
         }
+
+        //The difference between require and include:
+            //include will give a warning if it could not find the file
+            //require will give a fatal error if it could not find the file
+            //Use include_once and require_once except the times that you want the file to be included several times.
+            //We normally use require when we dynamically create a php file and we want to give an error if the file couldn't be found
+            
     ?>
 </div>
 
