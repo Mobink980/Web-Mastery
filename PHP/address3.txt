@@ -29,3 +29,8 @@ https://www.google.com
 https://www.bing.com
 https://www.yahoo.com
 https://www.amazon.com
+https://www.microsoft.com
+https://www.google.com
+https://www.bing.com
+https://www.yahoo.com
+https://www.amazon.com
