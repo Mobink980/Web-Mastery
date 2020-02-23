@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landmark</title>
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        *{
+            font-family: 'Microsoft Sans Serif';
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        body{
+            color:white;
+        }
+        #brand{
+            font-size: 25px;
+        }
+
+        .input-width{
+            width:130px !important; /*Make it important so overwrighting is not allowed*/
+        }
+                .content-container{
+            background:url("images/9.jpg");
+            height: 800px;
+            width: 100%;
+            background-size:cover;
+        }
+
+        #top-row{
+            text-align: center;
+            margin-top: 100px;
+            font-size: 150%;
+        }
+
+        #top-row h1{
+            font-size:300%;
+        }
+
+        .bold{
+            font-weight: bold;
+                   
+        }
+
+        .bold a{
+            color: #b6ff00;
+        }
+        .center{
+            text-align: center;
+        }
+
+        .margin-top{
+            margin-top: 30px;
+        }
+
+        .signup{
+            margin: 0 auto;
+        }
+
+        .title{
+            margin-top: 25px;
+            font-size: 300%;
+        }
+
+        #details{
+            color: black;
+        }
+
+        #footer{
+            background-color:#306c26;
+            padding-top: 50px;
+            width: 100%;
+        }
+
+        .env{
+            width: 450px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#menu-primary" data-offset="50">
+
+    <nav id="menu-primary" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!--navbar-toggle make the button appear when the size become the size of a mobile phone or tablet-->
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#collapse-menue">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="brand" class="navbar-brand" href="#">Environment</a>
+            </div>
+
+            <div id="collapse-menue" class="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#head">Home</a></li>
+                    <li><a href="#details">Contributions</a></li>
+                    <li><a href="#footer">About</a></li>
+                </ul>
+
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Username" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control " placeholder="Password" />
+                    </div>
+                    <button class="btn btn-primary">Login</button>
+                </form>
+            </div>
+
+  
+        </div>
+    </nav>
+ 
+    <div  class="container-fluid content-container">
+        <div class="row">
+            <div id="top-row" class="col-md-9 col-md-offset-2">
+                <h1 id="head">Environment, Development and Sustainability</h1>
+                <p class="lead">
+                    Aims and scope Environment, Development and Sustainability is an international
+                    and multidisciplinary journal covering all aspects of the environmental impacts of
+                    socio-economic development.
+                </p>
+
+                <p>
+                    It is also concerned with the complex interactions which occur between development
+                    and environment, and its purpose is to seek ways and means for achieving sustainability
+                    in all human activities aimed at such development. The subject matter of the journal includes
+                    the following and related issues: -mutual interactions among society, development and environment,
+                    and their implications for sustainable development -technical, economic, ethical and philosophical
+                    aspects of sustainable development -global sustainability - the obstacles and ways in which they
+                    could be overcome -local and regional sustainability initiatives, their practical implementation,
+                    and relevance for use in a wider context -development and application of indicators of
+                    sustainability -development, verification, implementation and monitoring of policies for sustainable
+                    development.
+                </p>
+                <p class="bold"><a href="https://www.journalguide.com/journals/environment-development-and-sustainability">Join Our Vibrant Community</a></p>
+                <form>
+                    <div class="input-group">
+                        <div class="input-group-addon">@</div>
+                        <input type="text" class="form-control" placeholder="Your email" />
+                    </div>
+                    <button class="btn btn-primary margin-top">Sign up</button>
+                </form>
+                <br /><br />
+            </div>
+     
+        </div>
+     
+    </div>
+
+    <div id="details" class="container ">
+        <div class="row center">
+            <p class="lead title">Why Help Us?</p>
+            <p class="lead">The journal welcomes scientific research papers, review papers and
+            discussion papers dealing with environmental sustainability issues from 
+            such fields as the biological sciences, agriculture, geology, meteorology, 
+            energy, food sciences, soil and water sciences, geography, nutrition, physical 
+            sciences, politics, economics, law, etc.</p>
+            <p class="lead">The journal particularly welcomes papers that highlight more than one dimension of sustainable development.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 margin-top">
+                <h4><span class="glyphicon glyphicon-apple">Contribute</span></h4>
+                <p>
+                    Journal complies with funding agency agreements. In addition,
+                    authors have the option to make their article available to non-subscribers
+                    immediately upon publication via Springer Open Choice (Typical cost: US $3,000).
+                </p>
+                <button class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span>Sign up</button>
+            </div>
+
+            <div class="col-md-4 margin-top">
+                <h4><span class="glyphicon glyphicon-apple">Contribute</span></h4>
+                <p>
+                    Journal complies with funding agency agreements. In addition,
+                    authors have the option to make their article available to non-subscribers
+                    immediately upon publication via Springer Open Choice (Typical cost: US $3,000).
+                </p>
+                <button class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span>Sign up</button>
+            </div>
+
+            <div class="col-md-4 margin-top">
+                <h4><span class="glyphicon glyphicon-apple">Contribute</span></h4>
+                <p>
+                    Journal complies with funding agency agreements. In addition,
+                    authors have the option to make their article available to non-subscribers
+                    immediately upon publication via Springer Open Choice (Typical cost: US $3,000).
+                </p>
+                <button class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span>Sign up</button>
+            </div>
+        </div>
+    </div>
+    <br /> <br />
+    <div id="footer" class="container ">
+        <div class="row">
+            <h1 class="center title"><a style="text-decoration:none;" href="https://www.google.com">Download Manifestation Letter</a></h1>
+            <p class="center">The Future of the Environment is the Future of our Children.</p>
+            <p class="lead center">
+                <img class="env" src="images/rabit.jpg"/>
+            </p>
+        </div>
+    </div>
+
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-1.11.1.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script>
+        $(".content-container").css("height", $(window).height());
+    </script>
+</body>
+</html>
