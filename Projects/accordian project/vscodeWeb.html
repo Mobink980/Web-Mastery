@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html>
+  
+<head>
+    <title>VSCode</title>
+
+    <link href="jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+    <style>
+            body {
+                text-align: center;
+                background-image: url("images/flower.jpg");
+            }
+    
+                body h1 {
+                    color: white;
+                    font-family: 'Microsoft Himalaya';
+                    font-size: 3em;
+                }
+    
+            .container {
+                margin: 20px auto;
+                width: 80%;
+                height: 600px;
+                background: white;
+            }
+    
+            #selectable{
+                list-style-type: none;
+                margin-top:0;
+                margin-left: 10px;
+                padding-top:20px;
+                width: 20%;
+            }
+    
+            #selectable li{
+                margin: 3px;
+                padding: 0.5em;
+                font-size: 1.4em;
+                height: 18px;
+            }
+    
+            #selectable .ui-selected{
+                background-color: #62ab25;
+            }
+    
+             #selectable .ui-unselecting{
+                background-color: #ffd800;
+            }
+    
+              #selectable .ui-selecting{
+                background-color: #31797a;
+            }
+    
+              .place{
+                  height:18px;
+                  background-color:#ffd800;
+                  border: 2px solid #ff6a00;
+              }
+
+              .imgWidth{
+                  width: 100px;
+                  height: 100px;
+              }
+
+              .ui-accordion-header{
+                     background: #666666;
+                     color: white;
+            }
+        </style>
+</head>  
+
+<body>
+
+    <h1>My First web project in vscode</h1>
+        <div class="container" style="background-color: darkslategray;">
+
+                <h3>Section one</h3>
+                <div>
+                        <p>I had a perfect conversation with the president of Ukraine. It was absolutely perfect!!</p>
+                        <p>I had a perfect conversation with the president of Ukraine. It was absolutely perfect!!</p>
+                        <p>I had a perfect conversation with the president of Ukraine. It was absolutely perfect!!</p>
+                        <img class="imgWidth" src="images/balls.jpg" alt="some balls"/>
+                </div>
+        
+                <h3>Section two</h3>
+                <div>
+                    <p>This is a beautiful paragraph. It was a perfect conversation.</p>
+                    <p>I had a perfect conversation with the president of Ukraine. It was absolutely perfect!!</p>
+                    <p>I had a perfect conversation with the president of Ukraine. It was absolutely perfect!!</p>
+                    <img class="imgWidth" src="images/houses.jpg" alt="some balls"/>
+                </div>
+        
+                <h3>Section three</h3>
+                <div>
+                    <p>This is a beautiful paragraph. It was a perfect conversation.</p>
+                    <p>I had a perfect conversation with the president of Ukraine. It was absolutely perfect!!</p>
+                    <div id=" format">
+                            <input type="checkbox" id="check1" /><label for="check1">one</label>
+                            <input type="checkbox" id="check2" /><label for="check2">two</label>
+                            <input type="checkbox" id="check3" /><label for="check3">three</label>
+                            <input type="checkbox" id="check4" /><label for="check4">four</label>
+                        </div>
+                </div>
+        
+                <h3>Section four</h3>
+                <div>
+                    <p>This is a beautiful paragraph. It was a perfect conversation.</p>
+                    <p>I had a perfect conversation with the president of Ukraine. It was absolutely perfect!!</p>
+                    <button>A button Element</button>
+                    <input type="submit" value="a submit button" />
+                    <a href="#">An Anchor</a>
+                    <input type="checkbox" id="check" /><label for="check">Toggle</label>
+                    <br /> <br />
+                    <img class="imgWidth" src="images/mosque.jpg" alt="some balls"/>
+                </div>
+        
+                <h3>Section five</h3>
+                <div id="dialog" title="Basic Dialog">
+                    <p>
+                        This is a beautiful paragraph. It was a perfect conversation. It was a perfect conversation.
+                        It was a perfect conversation.
+                    </p>
+                    <p>I had a perfect conversation with the president of Ukraine. It was absolutely perfect!!</p>
+                    <img class="imgWidth" src="images/flower.jpg" alt="some balls"/>
+                </div>
+            </div>
+    
+
+    <script type="text/javascript">
+
+ 
+
+        $(".container").accordion({ //Creating beautiful accordian
+            heightStyle: "fill",
+            collapsible: true,
+            
+
+        });
+
+        //coma in Jquery is used to select more stuff.
+        $("button, a, input[type = 'submit']").button().click(function () {
+
+            $("#dialog").dialog("open");
+        });
+
+        $("input[type = 'checkbox']").button(); //making a toggle button
+
+        $("#format").buttonset(); //creating a set of buttons
+
+        $("#dialog").dialog({ //creating a simple dialog
+            autoOpen: false,
+            modal: false,
+            width: 300,
+            height: 200,
+            resizable: true,
+            show: {
+                effect: "blind",
+                duration: 1000
+            },
+            hide: {
+                effect: "explode",
+                duration: 1000
+            },
+            buttons: {
+                OK: function () { //we will close the dialog box
+                    $(this).dialog("close");
+                },
+                Cancel: function () { //we will close the dialog box
+                    $(this).dialog("close");
+                }
+            }
+        }); 
+    </script>
+    
+</body>
+</html>
