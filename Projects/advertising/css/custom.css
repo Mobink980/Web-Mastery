@@ -1,0 +1,153 @@
+body{
+    font-family: Tahoma;
+    text-align: right;
+}
+
+a{
+    color: rgba(33, 70, 236, 0.904);
+}
+.navbar-top{
+    background-color: #333;
+    color: #fff;
+    vertical-align: middle;
+    font-size: 1.1em;
+    padding: 4px;
+    height: 30px;
+}
+.top-text{
+    position: absolute;
+    right: 30px;
+}
+
+.top-date{
+    position: absolute;
+    left: 50px;
+
+}
+
+.nav-logo{
+	background: url(../img/red_background.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
+    color: #fff;
+    height: 115px;	
+}
+
+
+.img-logo{
+    height: 105px;
+    width: 105px;
+    padding: 5px;
+    position: absolute;
+    right: 20px;
+}
+
+
+.branding-menu{
+    margin-top: 40px;
+    position: absolute;
+    left: 30px;
+}
+
+.navbar-heading{
+    padding: 0px;
+    height: 65px;
+}
+
+.header-list{
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+.navbar-bottom{
+    border-radius: 0px;
+}
+
+#my-menu{
+    margin-right: -350px;
+}
+
+#main-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  #main-menu li {
+    float: left;
+  }
+  
+  #main-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  #main-menu li a:hover {
+    background-color: #333;
+  }
+
+  .navbar-title{
+      font-size: 18px;
+      position: absolute;
+      right: 20px;
+      color: #fff !important;
+  }
+
+  .drop-menu{
+      color: white;
+      background-color: #333;
+  }
+  .drop-menu a:hover{
+    background-color: #444 !important;
+}
+
+.thumbnail h6{
+    font-size: large;
+}
+
+.thumb{
+    margin-top: 30px;
+}
+
+.thumb-content{
+    text-align: right;
+}
+
+.thumb-img{
+    padding: 0;
+}
+
+.pull-left{
+    margin-left: 0px;
+}
+
+.panel-tab{
+    width: 100%;
+    text-align: right;
+}
+.tab-explain{
+    margin-top: 30px;
+}
+.box-heading{
+    padding: 10px 15px;
+}
+
+.side-title{
+    padding: 10px;
+    background-color: #444;
+    border-bottom: 3px solid #777;
+    border-radius: 50px;
+    color: #fff;
+
+}
+
+.media h6{
+    font-weight: 800;
+}
