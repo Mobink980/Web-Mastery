@@ -1109,7 +1109,17 @@
     <script src="js/owl.carousel.js"></script> 
     <script src="js/numscroller-1.0.js"></script>  -->
     <script>
+        $(document).ready(function(){
+            $('ul.nav li.dropdown').hover(function(){
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+            }, function(){
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+            });
+        });
 
+        $('.carousel')({
+            interval: 3000 //changes the speed
+        });
     </script>
 
 </body>
