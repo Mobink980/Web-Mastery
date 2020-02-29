@@ -151,3 +151,33 @@ a{
 .media h6{
     font-weight: 800;
 }
+
+.footer{
+    background-color: #333;
+    color: #fff;
+    height: 200px;
+}
+
+.footer-list{
+    position: absolute;
+    left: 450px;
+    margin-top: 80px;
+}
+
+.footer-list li{
+    background-color: #333;
+    border: none;
+}
+.footer-list a{
+    color: #fff;
+}
+
+  .email-part{
+      margin-top: 50px;
+      position: absolute;
+      right: 20px;
+  }
+
+  .page{
+      margin: 0 auto;
+  }
