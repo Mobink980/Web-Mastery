@@ -1,0 +1,9 @@
+Building a project in node js:
+1.Installing the dependencies:
+npm install
+2. To serve in the browser - Runs webpack-dev-server
+npm start
+3. Compile and Build
+npm run build
+
+to upload the website, we only need assets folder, build folder, src folder, index.html, and favicons if we got any.
