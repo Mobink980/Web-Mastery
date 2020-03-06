@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Airports Finder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <nav class="navbar has-shadow">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <div class="title is-family-monospace	">Airport Finder</div>
+        </a>
+        <div class="navbar-burger burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <div class="navbar-item">
+            <small class="has-text-info">Search at the speed of light</small>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <div class="navbar-link">
+              Account
+            </div>
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                <div>
+                  <span class="icon is-small">
+                    <i class="fas fa-sign-in-alt"></i>
+                  </span>
+                  Sign In
+                </div>
+              </a>
+              <a class="navbar-item">
+                <div>
+                  <span class="icon is-small">
+                    <i class="fas fa-sign-out-alt"></i>
+                  </span>
+                  Sign Up
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="hero is-medium landing-bg">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="columns">
+          <div class="column"></div>
+          <div class="column is-6">
+            <h1 class="title is-1 is-italic has-text-weight-bold has-text-white	is-family-monospace">Search Nearby
+              Airports</h1>
+            <p>
+              <form>
+                <div class="field ">
+                  <div class="control is-large has-icons-left" id="loading">
+                    <input class="input is-large" type="text" placeholder="Enter place or city name" id="search">
+                    <span class="icon is-medium is-left">
+                      <i class="fas fa-search"></i>
+                    </span>
+                  </div>
+                </div>
+              </form>
+            </p>
+          </div>
+          <div class="column"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="section">
+    <div class="columns">
+      <div class="column"></div>
+      <div class="column" align="center">
+
+        <div id="notification">
+
+        </div>
+
+        <div class="container">
+          <!-- The table that we show the results in -->
+          <table class="table is-hoverable is-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Airport Code</th>
+                <th>Type</th>
+
+                <th>City</th>
+                <th>State/Province</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+
+            <tbody id="displayRow">
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+      <div class="column"></div>
+    </div>
+  </div>
+
+
+  <script src="build/app.bundle.js"></script>
+</body>
+
+</html>
