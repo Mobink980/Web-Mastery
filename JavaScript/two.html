@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+    <p>Before the script...</p>
+
+    <script>
+        'use strict';
+        function showMessage() {
+            alert("Hello from the function!!");
+        }
+
+        // showMessage();
+        // showMessage();
+
+        //If the function is declared as a separate statement in the main code flow, that’s called a “Function Declaration”.
+        // If the function is created as a part of an expression, it’s called a “Function Expression”.
+        //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        //function declaration 
+        //A global Function Declaration is visible in the whole script, no matter where it is (initialization)
+
+        //Checking the age to see it's greater than 18
+        function checkAge(age) {
+            if (age >= 18) {
+                return true;
+            } else {
+                return confirm('Do you have permission from your parents?');
+            }
+        }
+
+        
+    /**
+    * A function for exponentiation a ^ (b)
+    *
+    * @param {number} a The number to raise.
+    * @param {number} b The power, must be a natural number.
+    * @return {number} a raised to the b-th power.
+    */
+        function pow(a, b) {
+            let sum = 1;
+            if (b == 0) { //id the power is 0
+                return 1;
+            }
+            if (b < 0) { //if the power is negative
+                for (let i = 0; i < -b; i++) {
+                    sum *= a;
+                }
+                sum = 1 / sum; //2 ^ (-3) = 1 / 2 ^ (3)
+            } else { //if the power is positive
+                for (let i = 0; i < b; i++) {
+                    sum *= a;
+                }
+            }
+
+            return sum;
+        }
+        //function to calculate the minimum
+        function min(a, b) {
+            let min = a <= b ? a : b; //determining the minimum
+            return min;
+        }
+
+        //function to calculate the maximum
+        function max(a, b) {
+            let max = a > b ? a : b; //determining the minimum
+            return max;
+        }
+        //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+        //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        //function expressions 
+        //A Function Expression is created when the execution reaches it and is usable only from that moment.
+        let sayHi = function () {
+            alert("Hello");
+        }; //the semicolon is for the end of the assignment
+        let age = prompt('How old are you?', 18);
+
+        if (checkAge(age)) {
+            alert('Access granted');
+        } else {
+            alert('Access denied');
+        }
+        let welcome = (age < 18) ?
+            function () { alert("Hello!"); } :
+            function () { alert("Greetings!"); };
+        //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        //As a rule of thumb, when we need to declare a function, the first to consider is Function Declaration syntax.
+        //But if a Function Declaration does not suit us for some reason, or we need a conditional declaration, 
+        //then Function Expression should be used. (like in welcome variable)
+        //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        //callback functions 
+        function ask(question, yes, no) {
+            if (confirm(question)) {
+                yes(); //executing showOk() function
+            }
+            else no(); //executing showCancel() function
+        }
+
+        function showOk() {
+            alert("You agreed.");
+        }
+
+        function showCancel() {
+            alert("You canceled the execution.");
+        }
+
+        //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        //Arrow functions
+        let sum = (a, b) => a + b;
+        let minus = (a, b) => a - b;
+        let mult = (a, b) => a * b;
+        let div = (a, b) => a / b;
+        let double = n => n * 2;
+        let Hi = () => alert("Hello!");
+        /* The sum arrow function is a shorter form of:
+        
+        let sum = function(a, b) {
+          return a + b;
+        };
+        */
+        //calculating the area of a rectangle
+        let height = prompt("What is the height?", 12);
+        let width = prompt("What is the width?", 5);
+        alert(`The area of the rectangle is ${mult(height, width)}`);
+        //Multiline arrow functions
+        let aggregate = (a, b) => {  // the curly brace opens a multiline function
+            let result = a + b;
+            return result; // if we use curly braces, then we need an explicit "return"
+        };
+        // alert(sum(1, 2)); // 3
+        //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        let op = pow(min(1, 3), max(2, 4));
+        // alert(op);
+
+        // usage: functions showOk, showCancel are passed as arguments to ask
+        ask("Do you agree?", showOk, showCancel);
+        // welcome();
+        alert(pow(2, -2));
+    </script>
+
+    <p>...After the script.</p>
+
+</body>
+
+</html>
