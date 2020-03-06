@@ -1,0 +1,42 @@
+.hero.is-medium.landing-bg {
+  background-repeat: no-repeat;
+  background: url("./img/airport-min.jpg") center center;
+  background-size: cover;
+  
+
+}
+
+@media screen and (max-width: 510px) {
+  .hero.is-medium.landing-bg {
+    background-repeat: no-repeat;
+    background: url("./img/bg.jpg") center center;
+    background-size: cover;
+    
+  }
+  #search{
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .table th{
+    font-size: 20px;
+  }
+}
+
+
+@media screen and (max-width: 480px) and (min-width: 320px){
+  .hero.is-medium.landing-bg {
+    background-repeat: no-repeat;
+    background: url("./img/bg.jpg") center center;
+    background-size: cover;
+    
+  }
+  #search{
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .table th{
+    font-size: 15px;
+  }
+}
