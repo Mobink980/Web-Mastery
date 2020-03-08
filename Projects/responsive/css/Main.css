@@ -78,7 +78,7 @@ span.icon:after {
 
 /*------------------Header Code -------------------*/
 #home{
-	background: url(../Img/const-min.jpg) fixed;
+	background: url(../img/const-min.jpg) fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #fff;
