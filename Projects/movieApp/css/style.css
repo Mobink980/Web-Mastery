@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+nav .brand-logo{
+
+  color: #1678e9;
+  font-family: 'Raleway', sans-serif;
+}
+
+.input-field .prefix.active {
+
+  color: #1678e9;
+}
+
+.footer-title{
+
+  color: #1678e9 !important;
+}
