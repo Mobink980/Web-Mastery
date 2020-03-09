@@ -1,0 +1,3 @@
+for project to work:
+1. we need json server installed: npm install -g json-server
+2. we need to start the json server: json-server --watch db.json

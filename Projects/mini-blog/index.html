@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <style>
+    .footer {
+      background-image: linear-gradient(hsl(348, 100%, 53%), hsl(350, 100%, 50%));
+      color: #fff;
+    }
+
+    .footer strong {
+      color: #fff;
+    }
+
+    .footer a {
+      color: rgb(252, 169, 74);
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- NavBar Start -->
+
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <h2>
+          <a class="navbar-item" href="#">
+            <strong style="color: #eee;">Mini-Blog</strong>
+          </a>
+        </h2>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- NavBar End -->
+
+
+  <section class="hero is-danger is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Let's learn how to CRUD
+        </h1>
+        <h2 class="subtitle">
+          using ES6/ES7 +
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="container">
+    <br>
+
+    <div class="columns">
+      <div class="column is-three-fifths">
+
+        <div id="errContainer">
+          <div class="errTitle">
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-three-fifths">
+        <form>
+          <div class="field">
+            <div class="control">
+              <label class="label">Post Title</label>
+              <input class="input" type="text" id="post-title" placeholder="e.g. This is post one">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <textarea class="textarea" id="post-body" placeholder="What's on your mind?"></textarea>
+            </div>
+          </div>
+          <div class="field">
+            <input type="hidden" id="id" value="">
+          </div>
+          <button class=" button" id="post-submit">
+            <span class=" icon">
+              <i class="fas fa-plus"></i>
+            </span>
+            <span>Add Post</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Display Posts -->
+
+  <div id="post-display"></div>
+
+  <br>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Mini-Blog</strong> by <a href="#">Harrison</a>. The source code is licensed
+        <a href="#">MIT</a>. The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      </p>
+    </div>
+  </footer>
+
+
+  <script src="http.js"></script>
+  <script src="ui.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
