@@ -1,0 +1,32 @@
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#calculator{
+    width: 50%;
+    margin: 0 auto;
+}
+
+p{
+    font-size: 15px;
+}
+
+#tip, #total{
+   color: #111;
+}
+
+
+h1{
+    font-size: 65px;
+    text-align: center;
+    color: #1f80c9; 
+}
+
+#prec{
+    color: #cd5c5c;
+}
