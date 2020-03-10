@@ -1,0 +1,129 @@
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 250px) and (max-width: 699px) {
+    #clock {
+        color: #fff;
+        font-size: 35px;
+        background-color: #111;
+        padding: 0.2em 0;
+        width: 85%;
+        margin: 0px auto;
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: center;
+    }
+
+    #banner {
+        color: #fefefe;
+        font-size: 25px;
+        text-align: center;
+        background-color: #ebc652;
+        padding: 0.2em 0;
+        width: 85%;
+        margin: 10% auto 0;
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    span {
+        margin-left: 175px;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 699px) {
+    #clock {
+        color: #fff;
+        font-size: 65px;
+        background-color: #111;
+        padding: 0.2em 0;
+        width: 75%;
+        margin: 0px auto;
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: center;
+    }
+
+    #banner {
+        color: #fefefe;
+        font-size: 45px;
+        text-align: center;
+        background-color: #ebc652;
+        padding: 0.2em 0;
+        width: 75%;
+        margin: 10% auto 0;
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    span {
+        margin-left: 175px;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 999px) {
+    #clock {
+        color: #fff;
+        font-size: 85px;
+        background-color: #111;
+        padding: 0.2em 0;
+        width: 70%;
+        margin: 0px auto;
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: center;
+    }
+
+    #banner {
+        color: #fefefe;
+        font-size: 50px;
+        text-align: center;
+        background-color: #ebc652;
+        padding: 0.2em 0;
+        width: 70%;
+        margin: 10% auto 0;
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    span {
+        margin-left: 175px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #clock {
+        color: #fff;
+        font-size: 105px;
+        background-color: #111;
+        padding: 0.2em 0;
+        width: 60%;
+        margin: 0px auto;
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: center;
+    }
+
+    #banner {
+        color: #fefefe;
+        font-size: 50px;
+        text-align: center;
+        background-color: #ebc652;
+        padding: 0.2em 0;
+        width: 60%;
+        margin: 10% auto 0;
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    span {
+        margin-left: 175px;
+    }
+}
