@@ -1,0 +1,171 @@
+body{
+    background-image: linear-gradient(#222, #323, #333, #222);
+}
+#demo{
+    text-align: center;
+    color: white;
+    background-color: #3687e4;
+    width: 60%;
+    border-radius: 8px;
+    font-size: 1.9em;
+    margin: 0 auto;
+    display: none;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and  (min-width: 100px) and  (max-width: 389px) {
+    input {
+        width: 50px;
+        height: 40px;
+        font-size: 25px;
+        border-radius: 8px;
+        margin: 5px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+    }
+
+    #box {
+        width: 250px !important;
+        height: 45px !important;
+        text-align: center;
+        background-color: #fff;
+        color: #111;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.2em;
+        margin-top: 20px;
+        color: white;
+    }
+    
+
+    #plus {
+        background-color: #cc5c11;
+    }
+    
+    #minus {
+        background-color: #ba55d3;
+    }
+    
+    #mult {
+        background-color: #7db1b2;
+    }
+    
+    #c {
+    
+        background-color: #cc0000;
+    
+    }
+    
+    #divide {
+        background-color: green;
+    }
+}
+
+/* small devices (phones, 600px and down) */
+@media only screen and  (min-width: 390px) and  (max-width: 700px) {
+    input {
+        width: 70px;
+        height: 60px;
+        font-size: 35px;
+        border-radius: 8px;
+        margin: 10px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+    }
+
+    #box {
+        width: 355px !important;
+        height: 55px !important;
+        text-align: center;
+        background-color: #fff;
+        color: #111;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.2em;
+        margin-top: 20px;
+        color: white;
+    }
+    
+    
+    #plus {
+        background-color: #cc5c11;
+    }
+    
+    #minus {
+        background-color: #ba55d3;
+    }
+    
+    #mult {
+        background-color: #7db1b2;
+    }
+    
+    #c {
+    
+        background-color: #cc0000;
+    
+    }
+    
+    #divide {
+        background-color: green;
+    }
+}
+
+@media only screen and  (min-width: 701px) {
+    input {
+        width: 100px;
+        height: 90px;
+        font-size: 45px;
+        border-radius: 8px;
+        margin: 10px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+    }
+    
+    #myform {
+        margin: auto;
+    
+    }
+    
+    h1 {
+        text-align: center;
+        font-size: 2.2em;
+        margin-top: 20px;
+        color: white;
+    }
+    
+    #box {
+        width: 475px;
+        height: 80px;
+        text-align: center;
+        background-color: #fff;
+        color: #111;
+    }
+    
+    #plus {
+        background-color: #cc5c11;
+    }
+    
+    #minus {
+        background-color: #ba55d3;
+    }
+    
+    #mult {
+        background-color: #7db1b2;
+    }
+    
+    #c {
+    
+        background-color: #cc0000;
+    
+    }
+    
+    #divide {
+        background-color: green;
+    }
+}
