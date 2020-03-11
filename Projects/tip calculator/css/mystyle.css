@@ -6,27 +6,146 @@ footer {
     width: 100%;
     overflow: hidden;
 }
+/* Extra small */
+@media only screen and (max-width: 339px) {
+    #calculator{
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    p{
+        font-size: 10px;
+    }
+    
+    #tip, #total{
+       color: #111;
+    }
+    
+    
+    h1{
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        color: #1f80c9; 
+        margin-top: 8px;
+    }
+    
+    #prec{
+        color: #cd5c5c;
+    }
 
-#calculator{
-    width: 50%;
-    margin: 0 auto;
+    #addup{
+        width: 90%;
+        margin: 0 auto;
+        position: absolute;
+        left: 5%;
+    }
 }
 
-p{
-    font-size: 15px;
+@media only screen and (min-width: 340px) and (max-width: 599px) {
+    #calculator{
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    p{
+        font-size: 12px;
+    }
+    
+    #tip, #total{
+       color: #111;
+    }
+    
+    
+    h1{
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+        color: #1f80c9; 
+    }
+    
+    #prec{
+        color: #cd5c5c;
+    }
 }
 
-#tip, #total{
-   color: #111;
+@media only screen and (min-width: 600px) and (max-width: 999px) {
+    #calculator{
+        width: 60%;
+        margin: 0 auto;
+    }
+    
+    p{
+        font-size: 15px;
+    }
+    
+    #tip, #total{
+       color: #111;
+    }
+    
+    
+    h1{
+        font-size: 35px;
+        text-align: center;
+        color: #1f80c9; 
+    }
+    
+    #prec{
+        color: #cd5c5c;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1399px) {
+    #calculator{
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    p{
+        font-size: 15px;
+    }
+    
+    #tip, #total{
+       color: #111;
+    }
+    
+    
+    h1{
+        font-size: 45px;
+        text-align: center;
+        color: #1f80c9; 
+    }
+    
+    #prec{
+        color: #cd5c5c;
+    }
 }
 
 
-h1{
-    font-size: 65px;
-    text-align: center;
-    color: #1f80c9; 
-}
 
-#prec{
-    color: #cd5c5c;
+
+@media only screen and (min-width: 1400px){
+    #calculator{
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    p{
+        font-size: 15px;
+    }
+    
+    #tip, #total{
+       color: #111;
+    }
+    
+    
+    h1{
+        font-size: 65px;
+        text-align: center;
+        color: #1f80c9; 
+    }
+    
+    #prec{
+        color: #cd5c5c;
+    }
 }
