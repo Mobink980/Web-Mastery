@@ -8,6 +8,8 @@ footer {
     overflow: hidden;
 }
 
+
+
 @media only screen and (min-width: 250px) and (max-width: 699px) {
     #clock {
         color: #fff;
@@ -27,7 +29,7 @@ footer {
         background-color: #ebc652;
         padding: 0.2em 0;
         width: 85%;
-        margin: 10% auto 0;
+        margin: 5% auto 0;
         font-family: Helvetica, Arial, sans-serif;
         text-align: left;
         text-transform: uppercase;
@@ -35,6 +37,14 @@ footer {
 
     span {
         margin-left: 175px;
+    }
+
+    #day-box{
+        width: 75%;
+        margin: 1% auto;
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.9em;
     }
 }
 
@@ -57,7 +67,7 @@ footer {
         background-color: #ebc652;
         padding: 0.2em 0;
         width: 75%;
-        margin: 10% auto 0;
+        margin: 5% auto 0;
         font-family: Helvetica, Arial, sans-serif;
         text-align: left;
         text-transform: uppercase;
@@ -65,6 +75,14 @@ footer {
 
     span {
         margin-left: 175px;
+    }
+
+    #day-box{
+        width: 75%;
+        margin: 1% auto;
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.9em;
     }
 }
 
@@ -87,7 +105,7 @@ footer {
         background-color: #ebc652;
         padding: 0.2em 0;
         width: 70%;
-        margin: 10% auto 0;
+        margin: 5% auto 0;
         font-family: Helvetica, Arial, sans-serif;
         text-align: left;
         text-transform: uppercase;
@@ -95,6 +113,15 @@ footer {
 
     span {
         margin-left: 175px;
+    }
+
+
+    #day-box{
+        width: 50%;
+        margin: 1% auto;
+        color: #fff;
+        font-weight: 650;
+        font-size: 1.0em;
     }
 }
 
@@ -117,7 +144,7 @@ footer {
         background-color: #ebc652;
         padding: 0.2em 0;
         width: 60%;
-        margin: 10% auto 0;
+        margin: 5% auto 0;
         font-family: Helvetica, Arial, sans-serif;
         text-align: left;
         text-transform: uppercase;
@@ -125,5 +152,13 @@ footer {
 
     span {
         margin-left: 175px;
+    }
+
+    #day-box{
+        width: 30%;
+        margin: 1% auto;
+        color: #fff;
+        font-weight: 650;
+        font-size: 1.0em;
     }
 }
