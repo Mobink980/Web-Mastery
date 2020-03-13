@@ -1,0 +1,115 @@
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+}
+#head-title{
+    color: #fff;
+}
+
+body{
+    background-color: #333;
+}
+
+/* Extra small */
+@media only screen and (max-width: 649px) {
+    #wrapper{
+        width: 90%;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+
+    #task{
+        color: #fff;
+    }
+
+    #todos{
+        color: #fff;
+    }
+
+    .remove{
+        margin: 15px;
+    }
+}
+/* SMALL */
+@media only screen and (min-width: 650px) and (max-width: 899px) {
+    #wrapper{
+        width: 90%;
+        margin: 0 auto;
+        font-size: 17px;
+    }
+
+    #task{
+        color: #fff;
+    }
+
+    #todos{
+        color: #fff;
+    }
+
+    .remove{
+        margin: 15px;
+    }
+}
+/* MEDIUM */
+@media only screen and (min-width: 900px) and (max-width: 1099px) {
+    #wrapper{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #task{
+        color: #fff;
+    }
+
+    #todos{
+        color: #fff;
+    }
+
+    .remove{
+        margin: 15px;
+    }
+}
+/* LARGE */
+@media only screen and (min-width: 1100px) and (max-width: 1399px) {
+    #wrapper{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    #task{
+        color: #fff;
+    }
+
+    #todos{
+        color: #fff;
+    }
+
+    .remove{
+        margin: 15px;
+    }
+}
+
+/* EXTRA LARGE */
+@media only screen and (min-width: 1400px){
+
+    #wrapper{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    #task{
+        color: #fff;
+    }
+
+    #todos{
+        color: #fff;
+    }
+
+    .remove{
+        margin: 15px;
+    }
+}
