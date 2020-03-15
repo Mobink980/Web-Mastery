@@ -1,0 +1,60 @@
+@import url(http://fonts.googleapis.com/css?family=Rokkitt);
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+}
+#head-title{
+    color: #fff;
+    font-family: 'Rokkitt', serif;
+    text-align: center;
+}
+body {
+    background-color: #000;
+}
+
+
+
+/* Extra small */
+@media only screen and (max-width: 449px) {
+    #nav-title {
+        font-size: 20px;
+    }
+
+    #head-title{
+        font-size: 18px;
+    }
+
+    #lightbulb {
+        width: 215px;
+        height: 375px;
+        margin: 2px auto;
+    }
+}
+/* SMALL */
+@media only screen and (min-width: 450px) and (max-width: 899px) {
+    #nav-title {
+        font-size: 25px;
+    }
+
+    #head-title{
+        font-size: 23px;
+    }
+
+    #lightbulb {
+        width: 260px;
+        height: 460px;
+        margin: 5px auto;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #lightbulb {
+        width: 300px;
+        height: 520px;
+        margin: 5px auto;
+    }
+}
