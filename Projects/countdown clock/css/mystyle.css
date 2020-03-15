@@ -1,0 +1,272 @@
+@import url(http://fonts.googleapis.com/css?family=Rokkitt);
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+}
+#head-title{
+    color: #000;
+    font-family: 'Rokkitt', serif;
+    text-align: center;
+    font-weight: 700;
+}
+
+#demo{
+    text-align: center;
+    color: white;
+    width: 60%;
+    border-radius: 8px;
+    font-size: 1.2em;
+    margin: 0 auto;
+    display: none;
+}
+
+/* Extra small */
+@media only screen and (max-width: 529px){
+    #nav-title{
+        font-size: 20px;
+    }
+    #clockDiv {
+        font-family: 'Rokkitt', serif;
+        color: #fff;
+        display: inline-block;
+        font-weight: 600;
+        text-align: center;
+        font-size: 30px;
+        display: none;
+    }
+    
+    #clockDiv > div {
+        padding: 9px;
+        border-radius: 7px;
+        background-color: #b71c1c;
+        display: inline-block;
+    }
+    
+    #clockDiv > div > span {
+        padding: 9px;
+        border-radius: 3px;
+        background-color: #000;
+        display: inline-block;
+    }
+    
+    .smallText {
+        padding-top: 5px;
+        font-size: 15px;
+    }
+    
+    #set-time{
+        width: 40%;
+        margin: 1% auto;
+    }
+    
+    #set-time ::placeholder{
+        color: #555;
+    }
+}
+
+/* Extra small */
+@media only screen and (min-width: 530px) and (max-width: 649px){
+    #clockDiv {
+        font-family: 'Rokkitt', serif;
+        color: #fff;
+        display: inline-block;
+        font-weight: 100;
+        text-align: center;
+        font-size: 25px;
+        display: none;
+    }
+    
+    #clockDiv > div {
+        padding: 25px;
+        border-radius: 7px;
+        background-color: #b71c1c;
+        display: inline-block;
+    }
+    
+    #clockDiv > div > span {
+        padding: 25px;
+        border-radius: 3px;
+        background-color: #000;
+        display: inline-block;
+    }
+    
+    .smallText {
+        padding-top: 5px;
+        font-size: 20px;
+    }
+    
+    #set-time{
+        width: 40%;
+        margin: 1% auto;
+    }
+    
+    #set-time ::placeholder{
+        color: #555;
+    }
+}
+/* SMALL */
+@media only screen and (min-width: 650px) and (max-width: 899px) {
+    #clockDiv {
+        font-family: 'Rokkitt', serif;
+        color: #fff;
+        display: inline-block;
+        font-weight: 100;
+        text-align: center;
+        font-size: 30px;
+        display: none;
+    }
+    
+    #clockDiv > div {
+        padding: 30px;
+        border-radius: 7px;
+        background-color: #b71c1c;
+        display: inline-block;
+    }
+    
+    #clockDiv > div > span {
+        padding: 30px;
+        border-radius: 3px;
+        background-color: #000;
+        display: inline-block;
+    }
+    
+    .smallText {
+        padding-top: 5px;
+        font-size: 25px;
+    }
+    
+    #set-time{
+        width: 40%;
+        margin: 1% auto;
+    }
+    
+    #set-time ::placeholder{
+        color: #555;
+    }
+}
+/* MEDIUM */
+@media only screen and (min-width: 900px) and (max-width: 1099px) {
+    #clockDiv {
+        font-family: 'Rokkitt', serif;
+        color: #fff;
+        display: inline-block;
+        font-weight: 100;
+        text-align: center;
+        font-size: 45px;
+        display: none;
+    }
+    
+    #clockDiv > div {
+        padding: 35px;
+        border-radius: 7px;
+        background-color: #b71c1c;
+        display: inline-block;
+    }
+    
+    #clockDiv > div > span {
+        padding: 35px;
+        border-radius: 3px;
+        background-color: #000;
+        display: inline-block;
+    }
+    
+    .smallText {
+        padding-top: 5px;
+        font-size: 25px;
+    }
+    
+    #set-time{
+        width: 40%;
+        margin: 1% auto;
+    }
+    
+    #set-time ::placeholder{
+        color: #555;
+    }
+}
+/* LARGE */
+@media only screen and (min-width: 1100px) and (max-width: 1399px) {
+    #clockDiv {
+        font-family: 'Rokkitt', serif;
+        color: #fff;
+        display: inline-block;
+        font-weight: 100;
+        text-align: center;
+        font-size: 45px;
+        display: none;
+    }
+    
+    #clockDiv > div {
+        padding: 40px;
+        border-radius: 7px;
+        background-color: #b71c1c;
+        display: inline-block;
+    }
+    
+    #clockDiv > div > span {
+        padding: 40px;
+        border-radius: 3px;
+        background-color: #000;
+        display: inline-block;
+    }
+    
+    .smallText {
+        padding-top: 5px;
+        font-size: 25px;
+    }
+    
+    #set-time{
+        width: 40%;
+        margin: 1% auto;
+    }
+    
+    #set-time ::placeholder{
+        color: #555;
+    }
+}
+
+/* EXTRA LARGE */
+@media only screen and (min-width: 1400px){
+#clockDiv {
+    font-family: 'Rokkitt', serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 55px;
+    display: none;
+}
+
+#clockDiv > div {
+    padding: 50px;
+    border-radius: 7px;
+    background-color: #b71c1c;
+    display: inline-block;
+}
+
+#clockDiv > div > span {
+    padding: 50px;
+    border-radius: 3px;
+    background-color: #000;
+    display: inline-block;
+}
+
+.smallText {
+    padding-top: 5px;
+    font-size: 25px;
+}
+
+#set-time{
+    width: 40%;
+    margin: 1% auto;
+}
+
+#set-time ::placeholder{
+    color: #555;
+}
+
+}
