@@ -1,0 +1,47 @@
+@import url(http://fonts.googleapis.com/css?family=Rokkitt);
+@import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+}
+#head-title{
+    color: #000;
+    font-family: 'Rokkitt', serif;
+    text-align: center;
+}
+
+#feedControl {
+    margin-top: 85px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    font-size: 25px;
+    padding: 35px 55px 50px 50px;
+
+}
+
+/* Extra small */
+@media only screen and (max-width: 649px) {
+ 
+}
+/* SMALL */
+@media only screen and (min-width: 650px) and (max-width: 899px) {
+  
+}
+/* MEDIUM */
+@media only screen and (min-width: 900px) and (max-width: 1099px) {
+  
+}
+/* LARGE */
+@media only screen and (min-width: 1100px) and (max-width: 1399px) {
+  
+}
+
+/* EXTRA LARGE */
+@media only screen and (min-width: 1400px){
+
+}
