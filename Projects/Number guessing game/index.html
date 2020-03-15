@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="NUMBER GUESSING">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="css/mystyle.css">
+    <title>NUMBER GUESSING</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper #006064 cyan darken-4">
+            <a href="#" class="brand-logo left" id="nav-title"
+			style="font-weight: 700; margin-left: 15px;">NUMBER GUESSING</a>
+        </div>
+    </nav>
+
+    <section align="center">
+        <h4 id="head-title" align="center">Number Guessing Game</h4>
+        <p>Try and guess a random number between 1 and 100</p>
+        <p>You have 10 attempts to guess the right number</p>
+        <br>
+        <div id="demo">
+
+        </div>
+        <div id="wrapper">
+            <div class="form">             
+                <input type="text" class="guessField" id="guessField" placeholder="Guess a  number"> <br> <br>
+                <button type="submit" 
+                class="guessSubmit waves-effect waves-light btn-large #006064 cyan darken-4">Guess</button>
+            </div>
+
+            <div class="resultParas">
+                <div class="guesses"></div>
+                <div class="lastResult"></div>
+                <div class="lowOrHi"></div>
+                <div class="reset">
+                    <button id="resetBtn" 
+                    class="waves-effect waves-light btn-small #006064 cyan darken-4">Again?</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer class="page-footer #006064 cyan darken-4" id="footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/myscript.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
