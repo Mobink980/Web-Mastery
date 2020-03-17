@@ -1,0 +1,221 @@
+<html>
+
+<head>
+    <title>Login Page</title>
+
+    <link rel="stylesheet" href="custom.css">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="container">
+            <div class="content">
+
+                <div id="login-form" class="">
+                    <!-- sign in form -->
+                    <form action="/login.php" method="POST">
+                        <h3>Sign In</h3>
+                        <input type="text" placeholder="Username.." id="username">
+                        <input type="password" placeholder="Password.." id="password">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember Me</label>
+                        <a href="#" id="reset-password" class="btn" form="reset-form"><b>Forgot Pwd?</b></a>
+
+                        <button type="submit" id="log-in">Log In</button>
+                        <p id="footer">
+                            Don't have an account?
+                            <a href="#" class="btn" form="register-form">Sign Up</a>
+                        </p>
+                    </form>
+
+                </div>
+
+                <div id="register-form" class="hidden">
+                    <!-- registration form -->
+                    <form action="/register.php" method="POST">
+                        <h3>Sign Up</h3>
+                        <input type="text" placeholder="Username.." id="username">
+                        <input type="password" placeholder="Password.." id="password">
+                        <input type="password" placeholder="Repeat Password.." id="repeat-password">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">I Agree to terms and conditions</label>
+
+                        <button type="submit" id="log-in">register</button>
+                        <p id="footer">
+                            Already have an account?
+                            <a href="#" class="btn" form="login-form">Sign In</a>
+                        </p>
+                    </form>
+
+                </div>
+
+                <div id="reset-form" class="hidden">
+                    <!-- reset password form -->
+                    <form action="/reset.php" method="POST">
+                        <h3>Reset your password</h3>
+                        <input type="text" placeholder="Username or Email" id="username">
+                        <button type="submit" id="log-in">reset</button>
+
+                        <a href="#" class="btn" form="login-form">Sign In</a>
+                        <a href="#" class="btn float-right" form="register-form">Sign Up</a>
+                    </form>
+                </div>
+
+                <hr>
+                <h3>Audit</h3>
+                <table border="1" id="actions-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Form</th>
+                        <th>Action</th>
+                        <th>Date / Time</th>
+                        <th></th>
+                    </thead>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let buttons = document.getElementsByClassName("btn");
+        // console.log(buttons);
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].onclick = function () {
+                // alert(buttons[i].getAttribute("form"));
+                toggleForms(buttons[i].getAttribute("form"));
+            }
+        }
+
+        //This function will show the right form and hide the other forms
+        function toggleForms(formName) {
+
+            let toShow = formName;
+            let toHide = [];
+
+            switch (formName) {
+                case "reset-form":
+                    toHide.push("login-form", "register-form");
+                    break;
+
+                case "login-form":
+                    toHide.push("reset-form", "register-form");
+                    break;
+
+                case "register-form":
+                    toHide.push("login-form", "reset-form");
+                    break;
+            }
+
+            for (let i = 0; i < toHide.length; i++) {
+                document.getElementById(toHide[i]).className = "hidden";
+            }
+
+            document.getElementById(toShow).className = "show";
+
+            logAction(toShow);
+        }
+
+
+        //This function will store the data in browser and show the data in table
+        function logAction(formName) {
+
+            //This array will save any of the actions
+            let actions = localStorage.getItem("actions");
+
+            let id = 1;
+
+            //our actions have all the actions from the localStorage of the browser
+            //so when we click we get the existing data and we append more
+
+            if (actions) { //if actions are defined
+                //converting the string into an object 
+                actions = JSON.parse(actions);
+                //getting the id property of the last element of array and increment it
+                id = Number(actions[actions.length - 1].id) + 1;
+            } else { //if actions is undefined
+                actions = []; //create an empty array
+            }
+
+            //initializing the values by the right contents
+            let action = {
+                "id": id,
+                "form": formName,
+                "action": "Click",
+                "datetime": new Date().toLocaleString()
+            }
+
+            //pushing the action into the array 
+            actions.push(action);
+            //stringify the array
+            localStorage.setItem("actions", JSON.stringify(actions));
+            //calling the insertRowAction() function
+            insertRowAction(action);
+        }
+
+        function insertRowAction(action) {
+            //target the table
+            let table = document.getElementById("actions-table");
+            //create a row using javaScript function
+            let row = table.insertRow();
+
+            //defining some variables for each column of the row
+            let cellId = row.insertCell(0);
+            let cellForm = row.insertCell(1);
+            let cellAction = row.insertCell(2);
+            let cellDate = row.insertCell(3);
+            let cellDelete = row.insertCell(4);
+
+            cellId.innerHTML = action.id;
+            cellForm.innerHTML = action.form;
+            cellAction.innerHTML = action.action;
+            cellDate.innerHTML = action.datetime;
+            cellDelete.innerHTML = "X";
+            cellDelete.className = "delete"; //adding the style to the delete column
+            cellDelete.onclick = function () {
+                deleteRow(row, action.id);
+            }
+
+        }
+
+        //This function deletes a row from the table
+        function deleteRow(row, id) {
+            row.remove();
+            let actions = localStorage.getItem("actions");
+            actions = JSON.parse(actions);
+
+            actions.forEach(function (action, i) {
+                if (action.id == id) {
+                    actions.splice(i, 1); //removing the ith element
+                }
+            });
+
+            localStorage.setItem("actions", JSON.stringify(actions));
+
+            if(actions.length == 0){ //if actions is empty
+                localStorage.removeItem("actions");
+            }
+        }
+
+        //keeping the data on the table when the page reloads
+        function renderActions() {
+            let actions = localStorage.getItem("actions");
+            if (actions) {
+                actions = JSON.parse(actions);
+                actions.forEach( function(action) {
+                    insertRowAction(action);
+                });
+            }
+            
+        }
+
+        //executing the function each time the page reloads
+        renderActions();
+    </script>
+</body>
+
+</html>
