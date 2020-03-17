@@ -1,0 +1,89 @@
+.wrapper { 
+    width: 100%;
+    height: 100%;
+    background-image: url(login-register.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container { 
+    margin: 0 auto;
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+    top: 10%;
+    color: gray;
+}
+
+.content { 
+    padding: 5%;
+}
+
+h3 {
+    margin: 0 0 20px 0;
+}
+
+#username, #password, #repeat-password { 
+    width: 100%;
+    line-height: 35px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#remember-me {
+    width: 20px;
+    height: 20px;
+}
+
+label, #remember-me { 
+    cursor: pointer;
+}
+
+#reset-password { 
+    float: right;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+#log-in { 
+    width: 100%;
+    margin: 20px 0;
+    height: 50px;
+    background-color: #1E88E5;
+    border-radius: 5px;
+    border: 1px solid #1E88E5;
+    color: white;
+    text-transform: uppercase;
+}
+
+#footer { 
+    font-size: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.float-right {
+    float: right;
+}
+
+.delete {
+    color: red;
+    cursor: pointer;
+    font-weight: 900;
+}
