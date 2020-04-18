@@ -1,0 +1,232 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <title>App Landing Page</title>
+    <style>
+        .color-white {
+            color: #ddd !important;
+        }
+
+        .white a {
+            color: #ddd !important;
+        }
+
+        .white a:hover {
+            color: #4272ca !important;
+        }
+
+        .active a {
+            color: #fff !important;
+        }
+
+        pre {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- nav start -->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Image Gallery</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="btn btn-warning" href="#">+ UPLOAD <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Images, gifs and more"
+                    aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item m-1">
+                    <a class="btn btn-danger" data-toggle="modal" data-target="#login-modal" href="#">Sign in</a>
+                </li>
+                <li class="nav-item m-1">
+                    <a class="btn btn-danger" data-toggle="modal" data-target="#register-modal" href="#">Sign up</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- nav end -->
+
+    <!-- upload start -->
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Upload Image or GIF</h3>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="filename">Filename / Title</label>
+                    <input id="filename" type="text" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="area">Description</label>
+                    <textarea name="area" id="area" rows="3" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="cat-select">Category</label>
+                    <select class="form-control" name="cat-select" id="cat-select">
+                        <option value="">Nature</option>
+                        <option value="">Urban</option>
+                        <option value="">Outer Space</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cat-select">Upload Type</label>
+                    <div class="form-inline">
+
+                        <label for="">
+                            <input type="radio" name="upload-type"> Online File
+                        </label>
+                        <pre>  </pre>
+                        <label for="">
+                            <input type="radio" name="upload-type"> Local File
+                        </label>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Choose Local File</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Upload</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- upload end -->
+
+    <!-- Modal start -->
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%% Login Modal %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+    <div class="modal" id="login-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign in</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="email">Username / Email</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="remember">
+                                <input type="checkbox" id="remember"> Remember me
+                            </label>
+
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Jump In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%% Registration Modal %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+    <div class="modal" id="register-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign in</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="email">Username / Email</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Repeat Password</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="agree">
+                                <input type="checkbox" id="agree"> Agree to Terms of Use
+                            </label>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Jump In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal end -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
